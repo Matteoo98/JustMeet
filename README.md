@@ -6,3 +6,6 @@
 *********** PER SCARICARE CAMBIAMENTI *************
 
 git clone https://github.com/Matteoo98/Progetti.git
+
+PER ECLIPSE :
+tasto destro , team , pull... 
