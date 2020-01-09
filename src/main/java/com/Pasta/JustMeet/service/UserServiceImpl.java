@@ -11,6 +11,8 @@ import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 
 
@@ -30,9 +32,12 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public void save(User user) {
+		
 		user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+		
 	    Role userRole = roleRepository.findByName("USER");
-		user.getRoles().add(userRole);
+	    
+		user.setRoles(new HashSet<Role>(Arrays.asList(userRole)));
 		userRepository.save(user);
 	}
 
