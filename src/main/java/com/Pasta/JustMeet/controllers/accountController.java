@@ -82,9 +82,16 @@ public class accountController {
     }
 	@GetMapping("/account/deleteEvent")
     public String deleteEvent(@RequestParam int idEvento ) {
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		User user = userRepository.findByUsername(authentication.getName());
+		Events evento = rep.findById(idEvento);
+		if(user.getUsername().equals(evento.getOwner())) {
+			
+			userService.deleteEvento(idEvento);
     	
-    	userService.deleteEvento(idEvento);
-    	
+		}else {
+			return "unauthorized";
+		}
         return "redirect:/account";
     }
 	

@@ -6,6 +6,8 @@ package com.Pasta.JustMeet.controllers;
 import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -17,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.Pasta.JustMeet.model.Events;
 import com.Pasta.JustMeet.model.User;
 import com.Pasta.JustMeet.repository.EventsRepository;
+import com.Pasta.JustMeet.repository.UserRepository;
 import com.Pasta.JustMeet.service.UserService;
 
 /**
@@ -29,19 +32,31 @@ public class adminEventController {
     private UserService userService;
 	@Autowired
     private EventsRepository rep;
+	@Autowired
+    private UserRepository userRepository;
 
 	int idEventoDaModificare;
 	
 	@GetMapping("/adminEvent")
 	public String adminEvent(@RequestParam int idEvento ,Model model ) {
-		
-		idEventoDaModificare=idEvento;
-		model.addAttribute("adminEvent", new Events());
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		User user = userRepository.findByUsername(authentication.getName());
 		Events evento = rep.findById(idEvento);
-    	model.addAttribute("evento", evento);
+		
+		if(user.getUsername().equals(evento.getOwner())) {
+			
+			idEventoDaModificare=idEvento;
+			model.addAttribute("adminEvent", new Events());
+			//Events evento = rep.findById(idEvento);
+	    	model.addAttribute("evento", evento);
+	    	
+	    	Set<User> partecipanti = evento.getUsers();
+	    	model.addAttribute("partecipanti",partecipanti);
     	
-    	Set<User> partecipanti = evento.getUsers();
-    	model.addAttribute("partecipanti",partecipanti);
+		}else {
+			return "unauthorized";
+		}
+		
 		
     	
 		return "adminEvent";

@@ -43,8 +43,8 @@ public class managePartecipantiController {
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 		Events evento = rep.findById(idEvento);
 		if(!(authentication.getName().toLowerCase().contentEquals(evento.getOwner().toLowerCase()))) {
-			//fare una pagina per dire che non si è autorizzati ad accedere a quella richiesta
-			return "welcome";
+			
+			return "unauthorized";
 		}
 		id=idEvento;
 		
@@ -63,9 +63,15 @@ public class managePartecipantiController {
 	}
 	
 	@GetMapping("/managePartecipanti/remove")
-	public String managePartecipantiToRemove(@RequestParam int id , String username , Model model) {
+	public String managePartecipantiToRemove(@RequestParam int id , @RequestParam String username , Model model) {
 		Events evento = rep.findById(id);
 		User user = userRepository.findByUsername(username);
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		User owner = userRepository.findByUsername(authentication.getName());
+        if(!(owner.getUsername().toLowerCase().contentEquals(evento.getOwner().toLowerCase()))) {
+			
+			return "unauthorized";
+		}
 		user.getEventi().remove(evento);
 		userRepository.save(user);
 		return "redirect:/managePartecipanti?idEvento="+id;
@@ -73,14 +79,20 @@ public class managePartecipantiController {
 	@PostMapping("/search")
 	public String search(@RequestParam("search") String search , Model model) {
 		
-		//User user = userRepository.findByUsername(search);
-		//model.addAttribute("username", user.getUsername());
+		
 		return "redirect:/managePartecipanti?idEvento="+id+"&search="+search;
 	}
 	@GetMapping("/managePartecipanti/addToEvent")
-	public String managePartecipantiAddToEvent(@RequestParam int id , String username , Model model) {
+	public String managePartecipantiAddToEvent(@RequestParam int id ,@RequestParam String username , Model model) {
 		
 		try {
+			Events evento = rep.findById(id);
+			Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+			User owner = userRepository.findByUsername(authentication.getName());
+	        if(!(owner.getUsername().toLowerCase().contentEquals(evento.getOwner().toLowerCase()))) {
+				
+				return "unauthorized";
+			}
 			userService.joinEvento(username, id);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
