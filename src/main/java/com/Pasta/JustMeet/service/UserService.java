@@ -41,4 +41,16 @@ public interface UserService {
 	void deleteEvento(int idEvento);
 
 	void modifyEvent(Events eventoVecchio, Events eventoNuovo);
+
+	List<Events> searchEvents(User user, String searchEvent);
+
+	List<User> listaPersone(User user);
+
+	void richiestaAmicizia(User user1, User user2);
+
+	void accettaRichiestaAmicizia(User user, User sender);
+
+	void rifiutaRichiestaAmicizia(User user, User sender);
+
+	List<User> cercaPersone(User user, String searchFriend);
 }

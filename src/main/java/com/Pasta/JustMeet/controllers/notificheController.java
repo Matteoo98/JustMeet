@@ -48,6 +48,8 @@ public class notificheController {
         model.addAttribute("notifichecomuni", notifichecomuni);
         List<Notifiche> notificherichieste=userService.getNotificheByTipologia("richiesta",user);
         //map.addObject("notificherichieste", notificherichieste);
+        List<Notifiche> notificheamicizia=userService.getNotificheByTipologia("richiestaAmicizia",user);
+        model.addAttribute("notificheamicizia", notificheamicizia);
         model.addAttribute("notificherichieste", notificherichieste);
         //map.addObject("notifiche", user.getNotifiche().size());
         model.addAttribute("notifiche", user.getNotifiche().size());
@@ -95,5 +97,34 @@ public class notificheController {
 		
         return "redirect:/notifiche";
 	}
+	@GetMapping("/notifiche/accettaAmicizia")
+	public String accettaAmicizia(@RequestParam String username , @RequestParam int idnotifica) {
+		
+		Notifiche notifica= notificheRepository.findById(idnotifica);
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        User user = userRepository.findByUsername(authentication.getName());
+        user.getNotifiche().remove(notifica);
+        notificheRepository.delete(notifica);
+        userRepository.save(user);
+        User sender = userRepository.findByUsername(username);
+			userService.accettaRichiestaAmicizia(user,sender);
+		
+        return "redirect:/notifiche";
+	}
+	@GetMapping("/notifiche/rifiutaAmicizia")
+	public String rifiutaAmicizia(@RequestParam String username , @RequestParam int idnotifica) {
+		
+		Notifiche notifica= notificheRepository.findById(idnotifica);
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        User user = userRepository.findByUsername(authentication.getName());
+        user.getNotifiche().remove(notifica);
+        notificheRepository.delete(notifica);
+        userRepository.save(user);
+        User sender = userRepository.findByUsername(username);
+			userService.rifiutaRichiestaAmicizia(user,sender);
+		
+        return "redirect:/notifiche";
+	}
+	
 
 }

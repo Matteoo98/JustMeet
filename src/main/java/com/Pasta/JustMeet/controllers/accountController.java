@@ -49,10 +49,7 @@ public class accountController {
     	User user = userRepository.findByUsername(currentPrincipalName);
     	//lo aggiungo
     	list.add(user);
-    	// setto la view
-        //ModelAndView map = new ModelAndView("account");
-        //aggiungo la lista con l'utente nella mappa
-        //map.addObject("User", list);
+    	
     	model.addAttribute("User", list);
         // cerco gli eventi dove ci sta l'id dell'utente registrato
         
@@ -67,6 +64,7 @@ public class accountController {
         List<Events> eventi=userService.getOwnerEvents(user);
         //map.addObject("owner", eventi);
         model.addAttribute("owner", eventi);
+        model.addAttribute("amici", user.getAmici());
         return "account";
     }
 	@GetMapping("/account/modifyEvent")

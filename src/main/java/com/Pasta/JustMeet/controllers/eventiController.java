@@ -8,6 +8,8 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.Pasta.JustMeet.model.Events;
@@ -45,5 +47,15 @@ public class eventiController {
         model.addAttribute("notifiche", user.getNotifiche().size());
         return "eventi";
     }
+	@PostMapping("/searchEvent")
+	public String search(@RequestParam("searchEvent") String searchEvent , Model model) {
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        User user = userRepository.findByUsername(authentication.getName());
+		List<Events> lista = userService.searchEvents(user,searchEvent);
+		model.addAttribute("ricerca", lista);
+		model.addAttribute("searched", searchEvent);
+	
+		return "searchResult";
+	}
 
 }
