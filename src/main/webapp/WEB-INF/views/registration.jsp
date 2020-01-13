@@ -12,6 +12,13 @@
                 </div>
             </spring:bind>
 
+            <spring:bind path="cognome">
+                <div class="form-group ${status.error ? 'has-error' : ''}">
+                    <form:input type="cognome" path="cognome" class="form-control" placeholder="Cognome"></form:input>
+                    <form:errors path="cognome"></form:errors>
+                </div>
+            </spring:bind>
+
             <spring:bind path="password">
                 <div class="form-group ${status.error ? 'has-error' : ''}">
                     <form:input type="password" path="password" class="form-control" placeholder="Password"></form:input>
@@ -33,14 +40,7 @@
                     <form:errors path="email"></form:errors>
                 </div>
             </spring:bind>
-            
-            <spring:bind path="cognome">
-                <div class="form-group ${status.error ? 'has-error' : ''}">
-                    <form:input type="cognome" path="cognome" class="form-control" placeholder="Cognome"></form:input>
-                    <form:errors path="cognome"></form:errors>
-                </div>
-            </spring:bind>
-            
+                        
             <spring:bind path="citta">
                 <div class="form-group ${status.error ? 'has-error' : ''}">
                     <form:input type="citta" path="citta" class="form-control" placeholder="Citta"></form:input>
