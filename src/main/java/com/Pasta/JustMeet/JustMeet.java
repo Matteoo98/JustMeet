@@ -20,9 +20,8 @@ public class JustMeet extends SpringBootServletInitializer {
 
 
 
-// TODO : 5.SpringTest
-// TODO : 6.Rivisitare myMatch per aggiungere anche un filtro per eventi in base alla geolocalizzazione
-// TODO : 7. factory per la creazione delle notifiche
-// TODO : 9. l'utente deve poter modificare il proprio account
+// TODO : 5.SpringTest (difficult)
+// TODO : 7. factory or builder per la creazione delle notifiche (medium)
+
 
  

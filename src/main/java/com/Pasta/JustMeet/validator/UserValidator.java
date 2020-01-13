@@ -38,5 +38,16 @@ public class UserValidator implements Validator {
         if (!user.getPasswordConfirm().equals(user.getPassword())) {
             errors.rejectValue("passwordConfirm", "Diff.userForm.passwordConfirm");
         }
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "email", "NotEmpty");
+        
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "cognome", "NotEmpty");
+        
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "citta", "NotEmpty");
+        
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "preferenceUno", "NotEmpty");
+        
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "preferenceDue", "NotEmpty");
+        
+        ValidationUtils.rejectIfEmptyOrWhitespace(errors, "preferenceTre", "NotEmpty");
     }
 }

@@ -53,4 +53,6 @@ public interface UserService {
 	void rifiutaRichiestaAmicizia(User user, User sender);
 
 	List<User> cercaPersone(User user, String searchFriend);
+
+	void modifyAccount(User autenticato, User modifyAccount);
 }

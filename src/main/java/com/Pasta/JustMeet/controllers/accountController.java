@@ -53,16 +53,16 @@ public class accountController {
     	model.addAttribute("User", list);
         // cerco gli eventi dove ci sta l'id dell'utente registrato
         
-       // userService.callDB().getUserEvents(userid);
+       
         userService.controlloScadenzaEventi();
         Set<Events> userEvent = user.getEventi();
         
-        //map.addObject("notifiche", user.getNotifiche().size());
+        
         model.addAttribute("notifiche", user.getNotifiche().size());
-       //map.addObject("Events", userEvent);
+       
         model.addAttribute("Events", userEvent);
         List<Events> eventi=userService.getOwnerEvents(user);
-        //map.addObject("owner", eventi);
+       
         model.addAttribute("owner", eventi);
         model.addAttribute("amici", user.getAmici());
         return "account";

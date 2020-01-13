@@ -27,7 +27,7 @@ import com.Pasta.JustMeet.service.UserService;
  *
  */
 @Controller
-public class adminEventController {
+public class modifyAccountController {
 	@Autowired
     private UserService userService;
 	@Autowired
@@ -35,43 +35,33 @@ public class adminEventController {
 	@Autowired
     private UserRepository userRepository;
 
-	int idEventoDaModificare;
 	
-	@GetMapping("/adminEvent")
-	public String adminEvent(@RequestParam int idEvento ,Model model ) {
+	
+	@GetMapping("/modifyAccount")
+	public String adminEvent(Model model ) {
+		
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-		User user = userRepository.findByUsername(authentication.getName());
-		Events evento = rep.findById(idEvento);
-		
-		if(user.getUsername().equals(evento.getOwner())) {
+		User autenticato = userRepository.findByUsername(authentication.getName());
 			
-			idEventoDaModificare=idEvento;
-			model.addAttribute("adminEvent", new Events());
-			//Events evento = rep.findById(idEvento);
-	    	model.addAttribute("evento", evento);
+		model.addAttribute("modifyAccount", new User());
+			
+	    model.addAttribute("user", autenticato);
 	    	
-	    	Set<User> partecipanti = evento.getUsers();
-	    	model.addAttribute("partecipanti",partecipanti);
-    	
-		}else {
-			return "unauthorized";
-		}
-		
-		
-    	
-		return "adminEvent";
+		return "modifyAccount";
 	}
-	@PostMapping("/adminEvent")
-    public String adminEvent(@ModelAttribute("adminEvent") Events adminEvent, BindingResult bindingResult) {
+	@PostMapping("/modifyAccount")
+    public String adminEvent(@ModelAttribute("modifyAccount") User modifyAccount, BindingResult bindingResult) {
       
     	 if (bindingResult.hasErrors()) {
              return "eventi";
          }
-    	Events eventoVecchio = rep.findById(idEventoDaModificare);
+    	 Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+ 		User autenticato = userRepository.findByUsername(authentication.getName());
     	
-       userService.modifyEvent(eventoVecchio,adminEvent);
+    
+       userService.modifyAccount(autenticato,modifyAccount);
 
-        return "redirect:/account";
+        return "redirect:/login";
     }
 	
 }

@@ -444,4 +444,18 @@ public class UserServiceImpl implements UserService {
 		return lista;
 	}
 
+	@Override
+	public void modifyAccount(User autenticato, User modifyAccount) {
+		autenticato.setUsername(modifyAccount.getUsername());
+		autenticato.setPasswordConfirm(modifyAccount.getPasswordConfirm());
+		autenticato.setPassword(bCryptPasswordEncoder.encode(modifyAccount.getPassword()));
+		autenticato.setCognome(modifyAccount.getCognome());
+		autenticato.setEmail(modifyAccount.getEmail());
+		autenticato.setCitta(modifyAccount.getCitta());
+		autenticato.setPreferenceUno(modifyAccount.getPreferenceUno());
+		autenticato.setPreferenceDue(modifyAccount.getPreferenceDue());
+		autenticato.setPreferenceTre(modifyAccount.getPreferenceTre());
+		userRepository.saveAndFlush(autenticato);
+	}
+
 }

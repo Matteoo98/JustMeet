@@ -17,6 +17,8 @@ import com.Pasta.JustMeet.model.Events;
 import com.Pasta.JustMeet.model.User;
 import com.Pasta.JustMeet.repository.UserRepository;
 import com.Pasta.JustMeet.service.UserService;
+import com.Pasta.JustMeet.validator.EventValidator;
+import com.Pasta.JustMeet.validator.UserValidator;
 
 /**
  * @author matti
@@ -24,7 +26,8 @@ import com.Pasta.JustMeet.service.UserService;
  */
 @Controller
 public class eventCreatorController {
-	
+    @Autowired
+	private EventValidator eventValidator;
 	@Autowired
     private UserService userService;
 	@Autowired
@@ -41,9 +44,11 @@ public class eventCreatorController {
     
     @PostMapping("/eventCreator")
     public String eventCreator(@ModelAttribute("eventForm") Events eventForm, BindingResult bindingResult) {
+    	
+    	eventValidator.validate(eventForm, bindingResult);
        
     	 if (bindingResult.hasErrors()) {
-             return "eventi";
+             return "eventCreator";
          }
     	 
         userService.save(eventForm);
