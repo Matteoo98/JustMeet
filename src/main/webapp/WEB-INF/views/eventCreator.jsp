@@ -65,16 +65,13 @@
             
             <spring:bind path="category">
                <div class="form-group" >
-    <form:input list="Categorie" path="category" placeholder="Categoria"></form:input>
-    <datalist id="Categorie">
+    <form:input class="custom-select" list="list" type="text" path="category" placeholder="Categoria" ></form:input>
+    <datalist id="list">
     <option value="Sport">
-    <option value="Studio">
     <option value="Giochi">
-
-    
+    <option value="Studio">
     
     </datalist>
-    
     <form:errors path="category"></form:errors>
     </div>
          </spring:bind>

@@ -21,7 +21,6 @@
                     <form:errors path="username"></form:errors>
                 </div>
             </spring:bind>
-
             
              <spring:bind path="email">
                 <div class="form-group ${status.error ? 'has-error' : ''}">

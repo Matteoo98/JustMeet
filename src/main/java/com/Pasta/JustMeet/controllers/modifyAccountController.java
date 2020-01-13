@@ -21,6 +21,7 @@ import com.Pasta.JustMeet.model.User;
 import com.Pasta.JustMeet.repository.EventsRepository;
 import com.Pasta.JustMeet.repository.UserRepository;
 import com.Pasta.JustMeet.service.UserService;
+import com.Pasta.JustMeet.validator.UserValidator;
 
 /**
  * @author matti
@@ -34,7 +35,8 @@ public class modifyAccountController {
     private EventsRepository rep;
 	@Autowired
     private UserRepository userRepository;
-
+	@Autowired
+	private UserValidator userValidator;
 	
 	
 	@GetMapping("/modifyAccount")
@@ -51,9 +53,9 @@ public class modifyAccountController {
 	}
 	@PostMapping("/modifyAccount")
     public String adminEvent(@ModelAttribute("modifyAccount") User modifyAccount, BindingResult bindingResult) {
-      
+         userValidator.validate(modifyAccount, bindingResult);
     	 if (bindingResult.hasErrors()) {
-             return "eventi";
+             return "modifyAccount";
          }
     	 Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
  		User autenticato = userRepository.findByUsername(authentication.getName());

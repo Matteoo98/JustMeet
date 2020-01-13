@@ -21,6 +21,7 @@ import com.Pasta.JustMeet.model.User;
 import com.Pasta.JustMeet.repository.EventsRepository;
 import com.Pasta.JustMeet.repository.UserRepository;
 import com.Pasta.JustMeet.service.UserService;
+import com.Pasta.JustMeet.validator.EventValidator;
 
 /**
  * @author matti
@@ -34,6 +35,8 @@ public class adminEventController {
     private EventsRepository rep;
 	@Autowired
     private UserRepository userRepository;
+	@Autowired
+	private EventValidator eventValidator;
 
 	int idEventoDaModificare;
 	
@@ -64,8 +67,9 @@ public class adminEventController {
 	@PostMapping("/adminEvent")
     public String adminEvent(@ModelAttribute("adminEvent") Events adminEvent, BindingResult bindingResult) {
       
+		eventValidator.validate(adminEvent, bindingResult);
     	 if (bindingResult.hasErrors()) {
-             return "eventi";
+             return "adminEvent";
          }
     	Events eventoVecchio = rep.findById(idEventoDaModificare);
     	
