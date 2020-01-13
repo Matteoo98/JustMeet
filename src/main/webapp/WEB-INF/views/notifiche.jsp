@@ -18,8 +18,18 @@
 <a href="${contextPath}/notifiche/getNotificaInfoToAccept?idevento=${notifica.idEventoToJoin}&user=${notifica.sender}&idnotifica=${notifica.id}" class=button_partecipa>ACCETTA</a>
 <a href="${contextPath}/notifiche/getNotificaInfoToDeny?idevento=${notifica.idEventoToJoin}&user=${notifica.sender}&idnotifica=${notifica.id}" class=button_disdici>RIFIUTA</a>
         </c:forEach>
+        <p>-------------------------------------------------------------------------------------</p>
+        <h2 class="single_copy_title">RICHIESTE AMICIZIA</h2>
+        <c:forEach items="${notificheamicizia}" var="notifica" varStatus="tagStatus">
+        <p class="single_copy_meta"> Il ${notifica.day}/${notifica.month}/${notifica.year} alle ${notifica.ora}:${notifica.minuti} </p>
+        <p>${notifica.descrizione}</p>
+<a href="${contextPath}/notifiche/accettaAmicizia?username=${notifica.sender}&idnotifica=${notifica.id}" class=button_partecipa>ACCETTA</a>
+<a href="${contextPath}/notifiche/rifiutaAmicizia?username=${notifica.sender}&idnotifica=${notifica.id}" class=button_disdici>RIFIUTA</a>
+        </c:forEach>
       </div>
     </article>
+    
+    
      
 <h3>NOTIFICHE COMUNI</h3>
 <c:forEach items="${notifichecomuni}" var="notifica" varStatus="tagStatus">

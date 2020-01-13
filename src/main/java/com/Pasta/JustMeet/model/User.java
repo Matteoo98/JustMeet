@@ -24,6 +24,7 @@ public class User {
     private String cognome;
     
     private String citta;
+    
 
     public String getCognome() {
 		return cognome;
@@ -50,6 +51,27 @@ public class User {
 
 	public void setEventi(Set<Events> eventi) {
 		this.eventi = eventi;
+	}
+	
+	@ManyToMany
+    private Set<User> amici;
+	@ManyToMany(mappedBy = "amici")
+	private Set<User> utente;
+
+	public Set<User> getAmici() {
+		return amici;
+	}
+
+	public void setAmici(Set<User> amici) {
+		this.amici = amici;
+	}
+
+	public Set<User> getUtente() {
+		return utente;
+	}
+
+	public void setUtente(Set<User> utente) {
+		this.utente = utente;
 	}
 
 	@ManyToMany

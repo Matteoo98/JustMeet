@@ -17,6 +17,12 @@
   <div id="myBtnContainer" class="button_Sh_My">
   <button type="button" class="btn btn-outline-primary" onclick="filterSelection('tutti')"> Show all</button>
   <button type="button" class="btn btn-outline-primary" onclick="filterSelection('mymatch')"> myMatch</button>
+  <form:form name="searchEvent" action="searchEvent" method="POST" >
+    
+         <input type="text" name="searchEvent" placeholder="Search.."/>
+         <button type="submit"  ><i class="fa fa-search"></i></button>
+    
+</form:form>
   </div>
   
   <div class="grid">

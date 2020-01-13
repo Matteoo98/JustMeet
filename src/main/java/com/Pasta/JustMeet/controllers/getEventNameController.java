@@ -12,6 +12,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.Pasta.JustMeet.model.Events;
+import com.Pasta.JustMeet.model.User;
+import com.Pasta.JustMeet.repository.EventsRepository;
+import com.Pasta.JustMeet.repository.UserRepository;
 import com.Pasta.JustMeet.service.UserService;
 
 /**
@@ -23,16 +27,22 @@ public class getEventNameController {
 	
 	@Autowired
     private UserService userService;
-	
+	@Autowired
+    private UserRepository userRepository;
+	@Autowired
+    private EventsRepository rep;
 	@GetMapping("/eventi/getEventName")
-    public String join(@RequestParam Integer id) {
+    public String join(@RequestParam int id) {
     	//nome del tizio che cerco
     	Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
     	String currentPrincipalName = authentication.getName();
+    	User user = userRepository.findByUsername(currentPrincipalName);
+    	Events evento = rep.findById(id);
     	//insert
     	try {
-    		
-			userService.joinEvento(currentPrincipalName, id);
+    		if(user.getUsername().equals(evento.getOwner())) {
+    			userService.joinEvento(currentPrincipalName, id);			
+    		}else {return "unauthorized";}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

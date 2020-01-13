@@ -280,3 +280,40 @@ a:hover{color: #1af3a4;}
 .grid {
 	overflow:hidden;
 }
+* {
+  box-sizing: border-box;
+}
+
+/* Style the search field */
+form.searchEvent input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+/* Style the submit button */
+form.searchEvent button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+form.searchEvent button:hover {
+  background: #0b7dda;
+}
+
+/* Clear floats */
+form.searchEvent::after {
+  content: "";
+  clear: both;
+  display: table;
+}

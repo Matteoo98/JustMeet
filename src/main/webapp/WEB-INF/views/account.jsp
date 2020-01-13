@@ -30,6 +30,10 @@
         <p>${user.preferenceDue}</p>
         <p class="single_copy_meta"> Preferenza 3 : </p>
         <p>${user.preferenceTre}</p>
+        <p class="single_copy_meta"> Lista amici : </p>
+        <c:forEach items="${amici}" var="user" varStatus="tagStatus">
+        <p>- <a href="${contextPath}/eventView/account?nomeUser=${user.username}">${user.username}</a></p>
+        </c:forEach>
         </div>
     </article>
 </c:forEach>
@@ -79,7 +83,7 @@
           </div>
           
           <div class="allinea">
-            <a href="" class="button_dettagli">Add/Remove Users </a>
+            <a href="${contextPath}/managePartecipanti?idEvento=${event.id}" class="button_dettagli">Add/Remove Users </a>
           </div>
           
           <div class="allinea">

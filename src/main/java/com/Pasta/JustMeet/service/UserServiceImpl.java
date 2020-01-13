@@ -11,6 +11,8 @@ import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
 
 
@@ -30,9 +32,12 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public void save(User user) {
+		
 		user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
+		
 	    Role userRole = roleRepository.findByName("USER");
-		user.getRoles().add(userRole);
+	    
+		user.setRoles(new HashSet<Role>(Arrays.asList(userRole)));
 		userRepository.save(user);
 	}
 	// da rivedere
@@ -331,6 +336,112 @@ public class UserServiceImpl implements UserService {
 		eventoVecchio.setLuogo(eventoNuovo.getLuogo());
 		eventsRepository.save(eventoVecchio);
 		
+	}
+
+	@Override
+	public List<Events> searchEvents(User user ,String searchEvent) {
+		ArrayList<Events> lista = new ArrayList<>();
+		List<Events> tutti= eventsRepository.findAll();
+		for (Events e : tutti) {
+			if(!(user.getEventi().contains(e))) {
+				if(e.getName().toLowerCase().contains(searchEvent.toLowerCase())
+						||e.getDescription().toLowerCase().contains(searchEvent.toLowerCase())
+						||e.getLuogo().toLowerCase().contains(searchEvent.toLowerCase())) {
+					lista.add(e);
+				}
+			}
+		}
+		return lista;
+	}
+
+	@Override
+	public List<User> listaPersone(User user) {
+		ArrayList<User> lista = new ArrayList<>();
+		List<User> tutti= userRepository.findAll();
+		for (User u : tutti) {
+			if(!(user.getAmici().contains(u))&&u!=user) {
+				lista.add(u);
+			}
+		}
+		
+		return lista;
+	}
+
+	@Override
+	public void richiestaAmicizia(User user1, User user2) {
+		LocalDateTime now = LocalDateTime.now();
+		Notifiche notifica=new Notifiche(
+		        "L'utente "+user1.getUsername()+" ti ha inviato una richiesta di amicizia . Accetti o rifiuti ?" ,
+				"richiestaAmicizia", 
+				user1.getUsername(),
+				now.getHour(),
+				now.getMinute(),
+				now.getYear(),
+				now.getMonthValue(),
+				now.getDayOfMonth() );
+		notificheRepository.save(notifica);
+		user2.getNotifiche().add(notifica);
+		userRepository.save(user2);
+		
+		
+	}
+
+	@Override
+	public void accettaRichiestaAmicizia(User user, User sender) {
+		LocalDateTime now = LocalDateTime.now();
+		Notifiche notifica=new Notifiche(
+		        "L'utente "+user.getUsername()+" ha accettato la tua richiesta di amicizia." ,
+				"comune", 
+				"System",
+				now.getHour(),
+				now.getMinute(),
+				now.getYear(),
+				now.getMonthValue(),
+				now.getDayOfMonth() );
+		notificheRepository.save(notifica);
+		sender.getNotifiche().add(notifica);
+		userRepository.save(sender);
+		user.getAmici().add(sender);
+		sender.getAmici().add(user);
+		userRepository.save(user);
+		userRepository.save(sender);
+		
+		
+	}
+
+	@Override
+	public void rifiutaRichiestaAmicizia(User user, User sender) {
+		LocalDateTime now = LocalDateTime.now();
+		Notifiche notifica=new Notifiche(
+		        "L'utente "+user.getUsername()+" ha rifiutato la tua richiesta di amicizia." ,
+				"comune", 
+				"System",
+				now.getHour(),
+				now.getMinute(),
+				now.getYear(),
+				now.getMonthValue(),
+				now.getDayOfMonth() );
+		notificheRepository.save(notifica);
+		sender.getNotifiche().add(notifica);
+		userRepository.save(sender);
+	}
+
+	@Override
+	public List<User> cercaPersone(User user, String searchFriend) {
+		ArrayList<User> lista = new ArrayList<>();
+		List<User> tutti= userRepository.findAll();
+		for (User u : tutti) {
+			if(!(user.getAmici().contains(u))&&u!=user) {
+				if(u.getUsername().toLowerCase().contains(searchFriend.toLowerCase())
+						|| u.getCognome().toLowerCase().contains(searchFriend.toLowerCase()) ) {
+					
+					lista.add(u);
+				
+				}
+			}
+		}
+		
+		return lista;
 	}
 
 }
