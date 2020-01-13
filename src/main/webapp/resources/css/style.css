@@ -27,6 +27,10 @@ body{background: #eee;}
   padding: 10px 20px; border-radius: 3px; text-decoration: none; 
   margin-left: 33%; 
 } 
+.button_elimina{ 
+  display: inline-block; background: #C82333; color: #fff; 
+  text-decoration: none; 
+} 
 .button_dettagli{ 
   display: inline-block; background: #28a745; color: #fff; 
   padding: 10px 20px; border-radius: 3px; text-decoration: none; 
@@ -205,6 +209,7 @@ a:hover{color: #1af3a4;}
 ********************** */ 
 .footer{background: #333; padding: 30px; color: #fff; margin-top: 85px;} 
 .footer_index{background: #333; padding: 30px; color: #fff; margin-top: 50px;} 
+.footer_login{background: #333; padding: 30px; color: #fff; margin-top: 26.8%;} 
  
 /* ********************** 
           SINGLE 
@@ -215,6 +220,7 @@ a:hover{color: #1af3a4;}
   position: relative; 
   z-index: 1; 
 } 
+.single_copy_meta2{font-size: 18px; font-size: italic;}
 .single_copy_meta{font-weight: bold; font-size: 18px; font-size: italic;} 
 .single_copy_title{font-size: 32px;} 
  

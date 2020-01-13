@@ -12,36 +12,42 @@
     <article class="single">
       <div class="single_copy">
         <h2 class="single_copy_title">Dettagli Evento</h2>
-        <p></p>
-        <p class="single_copy_meta"> Nome Evento : </p>
-        <p>${evento.name}</p>
-        <p class="single_copy_meta"> Descrizione Evento : </p>
-        <p>${evento.description}</p>
-        <p class="single_copy_meta"> Luogo Evento : </p>
-        <p>${evento.luogo}</p>
-        <p class="single_copy_meta"> Owner Evento : </p>
-        <p>${evento.owner}</p>
-        <p class="single_copy_meta"> Categoria Evento : </p>
-        <p>${evento.category}</p>
-        <p class="single_copy_meta"> Giorno Evento : </p>
-        <p>${evento.day}</p>
-        <p class="single_copy_meta"> Mese Evento : </p>
-        <p>${evento.month}</p>
-        <p class="single_copy_meta"> Anno Evento : </p>
-        <p>${evento.year}</p>
-        <p class="single_copy_meta"> Ora Evento : </p>
-        <p>${evento.ora}</p>
-        <p class="single_copy_meta"> Minuto Evento : </p>
-        <p>${evento.minuti}</p>
-        <p class="single_copy_meta"> Partecipanti Evento : </p>
+        <br>
+
+        <p class="single_copy_meta2"> <strong>Nome Evento : </strong>&emsp;${evento.name}</p>
+
+        <p class="single_copy_meta2"> <strong>Descrizione Evento : </strong>&emsp;${evento.description}</p>
+
+        <p class="single_copy_meta2"> <strong>Luogo Evento : </strong>&emsp;${evento.luogo}</p>
+
+        <p class="single_copy_meta2"> <strong>Owner Evento : </strong>&emsp;${evento.owner}</p>
+
+        <p class="single_copy_meta2"> <strong>Categoria Evento : </strong>&emsp;${evento.category}</p>
+
+        <p class="single_copy_meta2"> <strong>Giorno Evento : </strong>&emsp;${evento.day}</p>
+
+        <p class="single_copy_meta2"> <strong>Mese Evento : </strong>&emsp;${evento.month}</p>
+
+        <p class="single_copy_meta2"> <strong>Anno Evento : </strong>&emsp;${evento.year}</p>
+
+        <p class="single_copy_meta2"> <strong>Ora Evento : </strong>&emsp;${evento.ora}</p>
+
+        <p class="single_copy_meta2"> <strong>Minuto Evento : </strong>&emsp;${evento.minuti}</p>
+
+        <p class="single_copy_meta2"> <strong>Partecipanti Evento : 
         <c:forEach items="${partecipanti}" var="user" varStatus="tagStatus">
-              <a href="${contextPath}/eventView/account?nomeUser=${user.username}">${user.username}</a>
+              <a href="${contextPath}/eventView/account?nomeUser=${user.username}"> </strong>&emsp;${user.username}&emsp;|</a>
         </c:forEach>
-        <p class="single_copy_meta">Torna indietro</p>
-        <a href="javascript:history.go(-1)" 
-onMouseOver="self.status=document.referrer;return true">
-Torna indietro</a>
+        </p>
+        <br>
+
+        <a class="btn btn-outline-success" href="javascript:history.go(-1)" onMouseOver="self.status=document.referrer;return true">
+          Torna a Eventi</a>
+
       </div>
+
+      
+
     </article>
 
 <%@ include file = "common/footer.jspf"%>

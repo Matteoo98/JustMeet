@@ -20,7 +20,11 @@
         <a class="btn btn-secondary btn-lg btn-block" href="${contextPath}/notifiche/getNotificaInfoToDeny?idevento=${notifica.idEventoToJoin}&user=${notifica.sender}&idnotifica=${notifica.id}">RIFIUTA</a>
         
         </c:forEach>
-        <p>---------------------------------------------------------------------------------------------------</p>
+
+        <br>
+        <hr width=70%; align="center";> 
+        <br>
+
         <h2 class="single_copy_title">RICHIESTE AMICIZIA</h2>
         <c:forEach items="${notificheamicizia}" var="notifica" varStatus="tagStatus">
         <p class="single_copy_meta"> Il ${notifica.day}/${notifica.month}/${notifica.year} alle ${notifica.ora}:${notifica.minuti} </p>

@@ -70,8 +70,12 @@
     <option value="Sport">
     <option value="Studio">
     <option value="Giochi">
+
+    
     
     </datalist>
+    
+    <form:errors path="category"></form:errors>
     </div>
          </spring:bind>
             

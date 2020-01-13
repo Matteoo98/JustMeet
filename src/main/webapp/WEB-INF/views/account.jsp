@@ -15,25 +15,27 @@
     <article class="single">
       <div class="single_copy">
         <h2 class="single_copy_title">INFORMAZIONI UTENTE</h2>
-        <p></p>
-        <p class="single_copy_meta"> Nome : </p> 
-        <p>${user.username}</p>
-        <p class="single_copy_meta"> Cognome : </p>
-        <p>${user.cognome}</p>
-        <p class="single_copy_meta"> Città : </p>
-        <p>${user.citta}</p>
-        <p class="single_copy_meta"> Email : </p>
-        <p>${user.email}</p>
-        <p class="single_copy_meta"> Preferenza 1 : </p>
-        <p>${user.preferenceUno}</p>
-        <p class="single_copy_meta"> Preferenza 2 : </p>
-        <p>${user.preferenceDue}</p>
-        <p class="single_copy_meta"> Preferenza 3 : </p>
-        <p>${user.preferenceTre}</p>
-        <p class="single_copy_meta"> Lista amici : </p>
+        <br>
+
+        <p class="single_copy_meta2"> <strong>Nome : </strong>&emsp;${user.username}</p>
+
+        <p class="single_copy_meta2"> <strong>Cognome : </strong>&emsp;${user.cognome}</p>
+
+        <p class="single_copy_meta2"> <strong>Citta : </strong>&emsp;${user.citta}</p>
+
+        <p class="single_copy_meta2"> <strong>Email : </strong>&emsp;${user.email}</p>
+
+        <p class="single_copy_meta2"> <strong>Preferenza 1 : </strong>&emsp;${user.preferenceUno}</p>
+
+        <p class="single_copy_meta2"> <strong>Preferenza 2 : </strong>&emsp;${user.preferenceDue}</p>
+
+        <p class="single_copy_meta2"> <strong>Preferenza 3 : </strong>&emsp;${user.preferenceTre}</p>
+
+        <p class="single_copy_meta2"> <strong>Lista amici : 
         <c:forEach items="${amici}" var="user" varStatus="tagStatus">
-        <p>- <a href="${contextPath}/eventView/account?nomeUser=${user.username}">${user.username}</a></p>
+          <a href="${contextPath}/eventView/account?nomeUser=${user.username}"></strong>&emsp;${user.username}&emsp;|</a></p>
         </c:forEach>
+        <a href="${contextPath}/modifyAccount" class="button_disdici">MODIFICA ACCOUNT</a>
         </div>
     </article>
 </c:forEach>
@@ -83,11 +85,14 @@
           </div>
           
           <div class="allinea">
-            <a href="${contextPath}/account/deleteEvent?idEvento=${event.id}" class="button_disdici">Elimina</a>
+            <a href="${contextPath}/managePartecipanti?idEvento=${event.id}" class="button_dettagli">Gestione</a>
           </div>
+          
+          <br><br>
 
-          <div class="allinea">
-            <a href="${contextPath}/managePartecipanti?idEvento=${event.id}" class="button_dettagli">Add/Remove</a>
+          <div>
+            <a href="${contextPath}/account/deleteEvent?idEvento=${event.id}" 
+            class="btn button_elimina btn-lg btn-block">Elimina</a>
           </div>
 
         </div>

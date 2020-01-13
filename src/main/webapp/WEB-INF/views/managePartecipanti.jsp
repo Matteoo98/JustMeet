@@ -17,7 +17,7 @@
         <div class="card_copy">
           <h3>${user.username}</h3>
           <p>Email : ${user.email}</p>
-          <p>Città : ${user.citta}</p>
+          <p>Citta : ${user.citta}</p>
           
           <p></p>
 
@@ -35,25 +35,33 @@
       
     </section>
 
+    <hr width=70%; align="center";> 
+    <br>
 
-<h1>Cerca nuovi partecipanti : </h1>
-<form:form name="search" action="search" method="POST" >
-    
-         <input type="text" name="search" placeholder="Search.."/>
-         <button type="submit"  ><i class="fa fa-search"></i></button>
-    
-</form:form>
+  <form:form class="form-inline my-2 my-lg-0" name="search" action="search" method="POST">
+      <input class="form-control mr-sm-2" type="search" name="search" 
+      placeholder="Nuovi partecipanti.." aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i> Cerca</button>
+    </form:form>
+
 
 
 <c:forEach items="${ricercati}" var="user" varStatus="tagStatus">
-<h1>Risultati della ricerca : </h1>
 <section class="banner_notify clearfix">
       <div class="banner_copy">
         <div class="banner_copy_text">
-          <p>Nome :<a href="${contextPath}/eventView/account?nomeUser=${user.username}">${user.username}</a></p>
-          <p>Città : ${user.citta} </p>
-          <p>Email : ${user.email} </p>
-          <p><a href="${contextPath}/managePartecipanti/addToEvent?id=${idevento}&username=${user.username}" class="button_partecipa">Aggiungi all'evento</a></p>          
+
+          <p class="single_copy_meta2">
+            <strong>Nome :</strong> &emsp;<a href="${contextPath}/eventView/account?nomeUser=${user.username}">${user.username}</a></p>
+          
+          <p class="single_copy_meta2">
+            <strong>Citta &nbsp;&nbsp;:</strong> &emsp;${user.citta} </p>
+
+          <p class="single_copy_meta2">
+            <strong>Email &nbsp;:</strong> &emsp;${user.email} </p>
+
+          <a href="${contextPath}/managePartecipanti/addToEvent?id=${idevento}&username=${user.username}" 
+            class="button_partecipa allinea">Aggiungi all'evento</a>         
         </div>
       </div>
     </section>
