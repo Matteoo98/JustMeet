@@ -25,7 +25,7 @@
             
              <spring:bind path="Year">
                 <div class="form-group ${status.error ? 'has-error' : ''}">
-                    <form:input type="text" path="Year" class="form-control" placeholder="Anno"
+                    <form:input type="number" path="Year" class="form-control" placeholder="Anno"
                                 autofocus="true"></form:input>
                     <form:errors path="Year"></form:errors>
                 </div>
@@ -33,7 +33,7 @@
             
             <spring:bind path="Month">
                 <div class="form-group ${status.error ? 'has-error' : ''}">
-                    <form:input type="text" path="Month" class="form-control" placeholder="Mese"
+                    <form:input type="number" path="Month" class="form-control" placeholder="Mese"
                                 autofocus="true"></form:input>
                     <form:errors path="Month"></form:errors>
                 </div>
@@ -41,7 +41,7 @@
             
             <spring:bind path="Day">
                 <div class="form-group ${status.error ? 'has-error' : ''}">
-                    <form:input type="text" path="Day" class="form-control" placeholder="Giorno"
+                    <form:input type="number" path="Day" class="form-control" placeholder="Giorno"
                                 autofocus="true"></form:input>
                     <form:errors path="Day"></form:errors>
                 </div>
@@ -49,7 +49,7 @@
             
             <spring:bind path="Ora">
                 <div class="form-group ${status.error ? 'has-error' : ''}">
-                    <form:input type="text" path="Ora" class="form-control" placeholder="Ora"
+                    <form:input type="number" path="Ora" class="form-control" placeholder="Ora"
                                 autofocus="true"></form:input>
                     <form:errors path="Ora"></form:errors>
                 </div>
@@ -57,7 +57,7 @@
             
             <spring:bind path="Minuti">
                 <div class="form-group ${status.error ? 'has-error' : ''}">
-                    <form:input type="text" path="Minuti" class="form-control" placeholder="Minuti"
+                    <form:input type="number" path="Minuti" class="form-control" placeholder="Minuti"
                                 autofocus="true"></form:input>
                     <form:errors path="Minuti"></form:errors>
                 </div>

@@ -83,11 +83,11 @@
           </div>
           
           <div class="allinea">
-            <a href="${contextPath}/managePartecipanti?idEvento=${event.id}" class="button_dettagli">Add/Remove Users </a>
-          </div>
-          
-          <div class="allinea">
             <a href="${contextPath}/account/deleteEvent?idEvento=${event.id}" class="button_disdici">Elimina</a>
+          </div>
+
+          <div class="allinea">
+            <a href="${contextPath}/managePartecipanti?idEvento=${event.id}" class="button_dettagli">Add/Remove</a>
           </div>
 
         </div>

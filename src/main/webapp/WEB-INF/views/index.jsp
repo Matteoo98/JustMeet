@@ -1,4 +1,4 @@
-<%@ include file = "common/header.jspf"%>
+<%@ include file = "common/headerIndex.jspf"%>
 
     <section class="cover">
       <div class="cover_filter"></div>

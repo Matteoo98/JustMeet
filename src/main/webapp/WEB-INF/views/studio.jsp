@@ -9,7 +9,6 @@
         </div>
       </div>
     </section>
-    <p>Eventi di Studio</p>
  
 <section class="cards clearfix">
     

@@ -43,7 +43,7 @@
             
             <spring:bind path="citta">
                 <div class="form-group ${status.error ? 'has-error' : ''}">
-                    <form:input type="citta" path="citta" class="form-control" placeholder="Città"></form:input>
+                    <form:input type="citta" path="citta" class="form-control" placeholder="Citta"></form:input>
                     <form:errors path="citta"></form:errors>
                 </div>
             </spring:bind>
@@ -52,20 +52,26 @@
             
             <spring:bind path="preferenceUno">
                <div class="form-group" >
-    <form:input list="sports" type="text" path="preferenceUno" placeholder="your preferences"></form:input>
-    <datalist id="sports">
-    <option value="CALCIO">
-    <option value="BASKET">
-    <option value="PALLAVOLO">
-    <option value="CALCIO A 5">
-    <option value="RUGBY">
-    </datalist>
-    </div>
+               
+                <form:input class="custom-select" list="sports" type="text" path="preferenceUno" placeholder="your preferences"></form:input>
+                
+                <datalist id="sports">
+                    <option value="CALCIO"></option>
+                    <option value="BASKET"></option>
+                    <option value="PALLAVOLO"></option>
+                    <option value="CALCIO A 5"></option>
+                    <option value="RUGBY"></option>
+                </datalist>
+               
+                
+            </div>
          </spring:bind>
+
+
          
          <spring:bind path="preferenceDue">
                <div class="form-group" >
-    <form:input list="faculty" type="text" path="preferenceDue" placeholder="your preferences"></form:input>
+    <form:input class="custom-select" list="faculty" type="text" path="preferenceDue" placeholder="your preferences"></form:input>
     <datalist id="faculty">
     <option value="INFORMATICA">
     <option value="CHIMICA">
@@ -78,7 +84,7 @@
          
          <spring:bind path="preferenceTre">
                <div class="form-group" >
-    <form:input list="games" type="text" path="preferenceTre" placeholder="your preferences"></form:input>
+    <form:input class="custom-select" list="games" type="text" path="preferenceTre" placeholder="your preferences"></form:input>
     <datalist id="games">
     <option value="FORTNITE">
     <option value="CALL OF DUTY">

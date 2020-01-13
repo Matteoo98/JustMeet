@@ -14,18 +14,20 @@
 
                          
      
-  <div id="myBtnContainer" class="button_Sh_My">
+  <div id="myBtnContainer" class="button_Sh_My allinea">
   <button type="button" class="btn btn-outline-primary" onclick="filterSelection('tutti')"> Show all</button>
   <button type="button" class="btn btn-outline-primary" onclick="filterSelection('mymatch')"> myMatch</button>
-  <form:form name="searchEvent" action="searchEvent" method="POST" >
-    
-         <input type="text" name="searchEvent" placeholder="Search.."/>
-         <button type="submit"  ><i class="fa fa-search"></i></button>
-    
-</form:form>
   </div>
+
+  <div id="myBtnContainer" class="button_Sh_My allinea_dx">
+  <form:form class="form-inline my-2 my-lg-0" name="searchEvent" action="searchEvent" method="POST">
+      <input class="form-control mr-sm-2" type="search" name="searchEvent" placeholder="Cerca un evento.." aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i> Cerca</button>
+    </form:form>
+  </div>
+  <br><br>
   
-  <div class="grid">
+  <div >
     <section class="cards clearfix">
     
     <c:forEach items="${lists}" var="list" varStatus="tagStatus">
@@ -34,8 +36,8 @@
         <img class="card_image" src="${contextPath}/resources/images/LogoEventi.jpg" alt="Nature">
         <div class="card_copy">
           <h3>${list.name}</h3>
-          <p>Descrizione : ${list.description}</p>
-          <p>Luogo : ${list.luogo}</p>
+          <p>${list.description}</p>
+          <p>${list.luogo}</p>
 
           <div class="allinea">
             <a href="${contextPath}/eventi/askToJoin?idevento=${list.id}" class="button_partecipa">Partecipa</a>
@@ -52,15 +54,15 @@
     
     
      <section class="cards clearfix">
-    <h1> EVENTI SUGGERITI IN BASE ALLE PREFERENZE</h1>
+    <h1>EVENTI SUGGERITI IN BASE ALLE PREFERENZE</h1>
     <c:forEach items="${mymatchlist}" var="list" varStatus="tagStatus">
     <div class="filterDiv mymatch" >
     <div class="card " >
         <img class="card_image" src="${contextPath}/resources/images/LogoEventi.jpg" alt="Nature">
         <div class="card_copy ">
           <h3>${list.name}</h3>
-          <p>Descrizione : ${list.description}</p>
-          <p>Luogo : ${list.luogo}</p>
+          <p>${list.description}</p>
+          <p>${list.luogo}</p>
 
           <div class="allinea">
             <a href="${contextPath}/eventi/askToJoin?idevento=${list.id}" class="button_partecipa">Partecipa</a>

@@ -9,7 +9,7 @@
         </div>
       </div>
     </section>
-    <p>EVENTI SPORTIVI</p>
+
 
     <section class="cards clearfix">
     

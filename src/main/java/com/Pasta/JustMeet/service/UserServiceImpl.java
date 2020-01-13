@@ -243,7 +243,7 @@ public class UserServiceImpl implements UserService {
 		int id=idevento;
 		Events evento=eventsRepository.findById(id);
 		Notifiche notifica=new Notifiche(
-        "L'utente "+currentPrincipalName+" desidera partecipare all'evento"+evento.getName()+"che hai creato. Accetti o rifiuti ?" ,
+        "L'utente "+currentPrincipalName+" desidera partecipare all'evento "+evento.getName()+" che hai creato. Accetti o rifiuti ?" ,
 		"richiesta", 
 		currentPrincipalName,
 		now.getHour(),

@@ -47,6 +47,7 @@ a{color: #16dd94}
 a:hover{color: #1af3a4;} 
 
 .allinea { float:left; margin-left:16px; }
+.allinea_dx { float:right; margin-right:16px; }
  
 /* ********************** 
           HEADER 
@@ -202,7 +203,7 @@ a:hover{color: #1af3a4;}
 /* ********************** 
           FOOTER 
 ********************** */ 
-.footer{background: #333; padding: 30px; color: #fff; margin-top: 40px;} 
+.footer{background: #333; padding: 30px; color: #fff; margin-top: 85px;} 
 .footer_index{background: #333; padding: 30px; color: #fff; margin-top: 50px;} 
  
 /* ********************** 

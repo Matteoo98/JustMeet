@@ -11,5 +11,13 @@
       </div>
     </section>
 
+    <section class="banner_notify clearfix">
+      <div class="banner_copy">
+        <div class="banner_copy_text">
+          <p>Descrizione sito...</p>
+        </div>
+      </div>
+    </section>
+
   
 <%@ include file = "common/footer.jspf"%>
