@@ -447,8 +447,6 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public void modifyAccount(User autenticato, User modifyAccount) {
 		autenticato.setUsername(modifyAccount.getUsername());
-		autenticato.setPasswordConfirm(modifyAccount.getPasswordConfirm());
-		autenticato.setPassword(bCryptPasswordEncoder.encode(modifyAccount.getPassword()));
 		autenticato.setCognome(modifyAccount.getCognome());
 		autenticato.setEmail(modifyAccount.getEmail());
 		autenticato.setCitta(modifyAccount.getCitta());
