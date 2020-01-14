@@ -456,4 +456,21 @@ public class UserServiceImpl implements UserService {
 		userRepository.saveAndFlush(autenticato);
 	}
 
+	@Override
+	public void deleteAccount(User user) {
+		
+		user.getEventi().removeAll(user.getEventi());
+		user.getNotifiche().removeAll(user.getNotifiche());
+		user.getAmici().removeAll(user.getAmici());
+		user.getRoles().removeAll(user.getRoles());
+		List<User> lista = userRepository.findAll();
+		for (User u : lista) {
+			if(u.getAmici().contains(user)) {
+				u.getAmici().remove(user);
+			}
+		}
+		userRepository.delete(user);
+		
+	}
+
 }

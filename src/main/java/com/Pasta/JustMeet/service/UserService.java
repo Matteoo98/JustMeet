@@ -55,4 +55,6 @@ public interface UserService {
 	List<User> cercaPersone(User user, String searchFriend);
 
 	void modifyAccount(User autenticato, User modifyAccount);
+
+	void deleteAccount(User user);
 }

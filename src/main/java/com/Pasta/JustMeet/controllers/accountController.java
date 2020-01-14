@@ -94,6 +94,15 @@ public class accountController {
 		}
         return "redirect:/account";
     }
+	@GetMapping("/account/deleteMe")
+    public String deleteAccount( ) {
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		User user = userRepository.findByUsername(authentication.getName());
+		
+		userService.deleteAccount(user);
+    	
+        return "redirect:/index";
+    }
 	
 	
 }
