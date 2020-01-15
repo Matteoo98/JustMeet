@@ -56,10 +56,4 @@
      </tr>
     </c:forEach>
    </table>
-
- 
-
-
-
-
  <%@ include file = "common/footer.jspf"%>

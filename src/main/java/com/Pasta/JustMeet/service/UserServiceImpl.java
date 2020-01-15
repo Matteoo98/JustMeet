@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 
 @Service
@@ -446,6 +447,13 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	public void modifyAccount(User autenticato, User modifyAccount) {
+		List<Events> lista = eventsRepository.findAll();
+    	for (Events e : lista) {
+			  if(e.getOwner().contentEquals(autenticato.getUsername())) 
+			  {
+        		e.setOwner(modifyAccount.getUsername());
+     	 	}
+    	}
 		autenticato.setUsername(modifyAccount.getUsername());
 		autenticato.setCognome(modifyAccount.getCognome());
 		autenticato.setEmail(modifyAccount.getEmail());
