@@ -53,6 +53,8 @@ a:hover{color: #1af3a4;}
 .allinea { float:left; margin-left:16px; }
 .allinea_dx { float:right; margin-right:16px; }
  
+.centro{vertical-align: middle; margin-left: 120px;}
+
 /* ********************** 
           HEADER 
 ********************** */ 

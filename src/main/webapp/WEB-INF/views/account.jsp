@@ -33,11 +33,16 @@
 
         <p class="single_copy_meta2"> <strong>Lista amici : 
         <c:forEach items="${amici}" var="user" varStatus="tagStatus">
-          <a href="${contextPath}/eventView/account?nomeUser=${user.username}"></strong>&emsp;${user.username}&emsp;|</a></p>
+          <a href="${contextPath}/eventView/account?nomeUser=${user.username}"></strong>&emsp;${user.username}&emsp;|</a>
         </c:forEach>
-        <a href="${contextPath}/modifyAccount" class="button_dettagli">MODIFICA ACCOUNT</a>
-        <a href="${contextPath}/account/deleteMe" class="button_disdici">ELIMINA ACCOUNT</a>
-        </div>
+        </p>
+        <br>
+        <p class="centro">
+          <a href="${contextPath}/modifyAccount" class="button_dettagli allinea">MODIFICA ACCOUNT</a>
+          <a href="${contextPath}/account/deleteMe" class="button_disdici allinea">ELIMINA ACCOUNT</a>
+        </p>
+        <br><br>
+      </div>
         
     </article>
 </c:forEach>
