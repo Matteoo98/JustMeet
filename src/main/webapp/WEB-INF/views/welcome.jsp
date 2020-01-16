@@ -1,6 +1,15 @@
 <%@ include file = "common/header.jspf"%>
-
-
+<script>
+var x = ${numeroutenti};
+var y = ${numeroeventi};
+var w = ${numeroEventiInCorso};
+var r = ${numeroEventiCreati};
+var p =	${numeroAmici};
+</script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="${contextPath}/resources/js/pieChartWelcome.js"></script>
+<script src="${contextPath}/resources/js/pieChartWelcome2.js"></script>
+<script src="${contextPath}/resources/js/pieChartWelcome3.js"></script>
     <section class="cover">
       <div class="cover_filter"></div>
       <div class="cover_caption">
@@ -11,49 +20,9 @@
       </div>
     </section>
 
-    <section class="banner_notify clearfix">
-      <div class="banner_copy">
-        <div class="banner_copy_text">
-          <p>Descrizione sito...</p>
-        </div>
-      </div>
-    </section>
+<div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+<div id="piechart_3d2" style="width: 900px; height: 500px;"></div>
+<div id="piechart_3d3" style="width: 900px; height: 500px;"></div>
 
-<table style="width:100%" border="">
-  <tr>
-    <th>NUMERO UTENTI REGISTRATI</th>
-    <th>NUMERO EVENTI REGISTRATI</th>
-  </tr>
-  
-  <tr>
-    <td>${numeroutenti}</td> 
-   
-    <td>${numeroeventi}</td>
-    </tr>
-</table> 
-  
-    
-    <table style="width:100%" border="1">
-      <tr>
-        <th>NOME UTENTI REGISTRATI</th>
-      </tr>
-      <c:forEach items="${utenti}" var="utente" varStatus="tagStatus">
-        <tr>
-          <td>- ${utente.username}</td>
-        </tr>
-      </c:forEach> 
-    </table> 
-     
-    <table style="width:100%" border="1">
-      <tr>
-        <th>NOME EVENTI REGISTRATI</th>
-      </tr>
-    
-      <c:forEach items="${eventi}" var="evento" varStatus="tagStatus">
-        <tr>
-          <td>- ${evento.name}</td>  
-        </tr>
-      </c:forEach>
-   </table>
   
 <%@ include file = "common/footer.jspf"%>

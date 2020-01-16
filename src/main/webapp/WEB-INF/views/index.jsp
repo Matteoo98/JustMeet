@@ -1,4 +1,10 @@
 <%@ include file = "common/headerIndex.jspf"%>
+<script>
+var x = ${numeroutenti}
+var y = ${numeroeventi}
+</script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="${contextPath}/resources/js/pieChart.js"></script>
 
     <section class="cover">
       <div class="cover_filter"></div>
@@ -10,50 +16,7 @@
         </div>
       </div>
     </section>
-<table style="width:100%" border="">
-  <tr>
-    <th>NUMERO UTENTI REGISTRATI</th>
-    <th>NUMERO EVENTI REGISTRATI</th>
-  </tr>
-  
-  <tr>
-    <td>
-    ${numeroutenti}
-    </td> 
-   
-     
-    <td>
-    ${numeroeventi}
-    </td>
-    </tr>
-  </table> 
-  
     
-    <table style="width:100%" border="1">
-  <tr>
-    <th>NOME UTENTI REGISTRATI</th>
-  </tr>
-    <c:forEach items="${utenti}" var="utente" varStatus="tagStatus">
-    <tr>
-    <td>
-     - ${utente.username}   
-    </td>
-    </tr>
-    </c:forEach> 
-   </table> 
-     
-     
-    <table style="width:100%" border="1">
-  <tr>
-    <th>NOME EVENTI REGISTRATI</th>
-  </tr>
-    
-    <c:forEach items="${eventi}" var="evento" varStatus="tagStatus">
-    <tr>
-    <td>
-        - ${evento.name} 
-     </td>  
-     </tr>
-    </c:forEach>
-   </table>
+    <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+
  <%@ include file = "common/footer.jspf"%>

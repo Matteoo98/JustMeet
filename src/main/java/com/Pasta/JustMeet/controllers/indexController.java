@@ -33,10 +33,10 @@ public class indexController {
 	@GetMapping({ "/" , "/index"})
     public String index(Model model) {
     	List<User> lista= userRepository.findAll();
-    	model.addAttribute("utenti", lista);
+    	//model.addAttribute("utenti", lista);
     	model.addAttribute("numeroutenti",lista.size());
         List<Events> eventi= eventsRepository.findAll();
-        model.addAttribute("eventi", eventi);
+        //model.addAttribute("eventi", eventi);
         model.addAttribute("numeroeventi",eventi.size());
         return "index";
     }

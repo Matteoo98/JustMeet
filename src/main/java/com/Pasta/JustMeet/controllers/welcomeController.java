@@ -16,6 +16,7 @@ import com.Pasta.JustMeet.model.Events;
 import com.Pasta.JustMeet.model.User;
 import com.Pasta.JustMeet.repository.EventsRepository;
 import com.Pasta.JustMeet.repository.UserRepository;
+import com.Pasta.JustMeet.service.UserService;
 
 /**
  * @author matti
@@ -24,25 +25,27 @@ import com.Pasta.JustMeet.repository.UserRepository;
 @Controller
 public class welcomeController {
 	@Autowired
+    private UserService userService;
+	@Autowired
 	private UserRepository userRepository;
 	@Autowired
     private EventsRepository eventsRepository;
 
 	@GetMapping({ "/welcome"})
     public String welcome(Model model , Principal user) {
+		
 		if(user!=null) {
 			User utente = userRepository.findByUsername(user.getName());
 			model.addAttribute("notifiche", utente.getNotifiche().size());
 		}
 		model.addAttribute("principal", user.getName());
-
-		List<User> lista= userRepository.findAll();
-    	model.addAttribute("utenti", lista);
-    	model.addAttribute("numeroutenti",lista.size());
-		
-		List<Events> eventi= eventsRepository.findAll();
-        model.addAttribute("eventi", eventi);
-        model.addAttribute("numeroeventi",eventi.size());
+		User utente = userRepository.findByUsername(user.getName());
+//le mie statistiche
+		model.addAttribute("numeroeventi", eventsRepository.findAll().size()) ;
+    	model.addAttribute("numeroEventiInCorso", utente.getEventi().size());
+    	model.addAttribute("numeroEventiCreati", userService.getOwnerEvents(utente).size()); 
+    	model.addAttribute("numeroutenti", userRepository.findAll().size()) ;
+        model.addAttribute("numeroAmici", utente.getAmici().size());
 
         return "welcome";
     }
