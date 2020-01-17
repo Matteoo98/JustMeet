@@ -4,11 +4,13 @@ google.charts.load("current", {packages:["corechart"]});
         var data = google.visualization.arrayToDataTable([
           ['Object', 'Number'],
           ['Tutti gli Eventi',     y],
-          ['Eventi creati ',      r]
+          ['Eventi che hai creato ',      r]
         ]);
 
         var options = {
           title: 'JustMeet Statistics',
+          backgroundColor: '#eee',
+          colors: ['black','grey'],
           is3D: true,
         };
 

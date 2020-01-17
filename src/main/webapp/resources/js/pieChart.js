@@ -9,6 +9,7 @@ google.charts.load("current", {packages:["corechart"]});
 
         var options = {
           title: 'JustMeet Statistics',
+          backgroundColor: '#eee',
           is3D: true,
         };
 

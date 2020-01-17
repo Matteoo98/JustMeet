@@ -15,7 +15,7 @@ import com.Pasta.JustMeet.model.User;
  */
 public interface EventsRepository extends JpaRepository<Events, Integer> {
 	
-	//User findByEvent(String nome);
+	
 	
 	Events findByName(String name);
 	Events findById(int id);

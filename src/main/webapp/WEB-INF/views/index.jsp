@@ -17,6 +17,6 @@ var y = ${numeroeventi}
       </div>
     </section>
     
-    <div id="piechart_3d" style="width: 900px; height: 500px;"></div>
+    <div id="piechart_3d" style="width: 100%; height: 100%;"></div>
 
  <%@ include file = "common/footer.jspf"%>
