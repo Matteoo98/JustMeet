@@ -14,7 +14,10 @@ tasto destro , team , pull...
 Link corretto del repository :
 https://github.com:443/Matteoo98/JustMeet.git
 
+*********** GOOGLE DIAGRAMS **********
+
 PER CAMBIARE I DIAGRAMMI CON ALTRE FORME CLICCARE IL LINK : https://developers.google.com/chart/interactive/docs/gallery?hl=it
 
+*********** UTILS **********
 
 Se uno volesse testare l'app da local host sull'internet pubblico basta scaricare ngrok 
