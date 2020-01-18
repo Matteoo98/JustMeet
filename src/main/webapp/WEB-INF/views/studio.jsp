@@ -4,8 +4,8 @@
       <div class="cover_filter"></div>
       <div class="cover_caption">
         <div class="cover_caption_copy">
-            <h1>Studio</h1>
-            <a href="" class="button">Crea un evento</a>
+            <h1  class="font-effect-fire-animation">Studio</h1>
+            <a href="${contextPath}/eventCreator" class="button">Crea un evento</a>
         </div>
       </div>
     </section>

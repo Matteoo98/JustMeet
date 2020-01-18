@@ -1,13 +1,13 @@
 </body>
 <footer class="footer">
-      <p>Copyright - 2019 Romans98 & Teo98</p>
+      <div class="font-effect-fire-animation" >Copyright - 2019 Romans98 & Teo98</div>
     </footer>
      
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-  
+  <script src="${contextPath}/resources/js/flipside.js"></script>
     <script>
       $(document).ready(function(){
 

@@ -1,10 +1,11 @@
 <%@ include file = "common/header.jspf"%>
+<link href="${contextPath}/resources/css/flipside.css" rel="stylesheet" type="text/css" />
 
     <section class="cover cover--single">
       <div class="cover_filter"></div>
       <div class="cover_caption">
         <div class="cover_caption_copy">
-          <h1>Just Meet</h1>
+          <h1 class="font-effect-fire-animation">ACCOUNT</h1>
         </div>
       </div>
     </section>
@@ -14,7 +15,7 @@
 <c:forEach items="${User}" var="user" varStatus="tagStatus">
     <article class="single">
       <div class="single_copy">
-        <h2 class="single_copy_title">INFORMAZIONI UTENTE</h2>
+        <h2 class="single_copy_title font-effect-fire-animation">INFORMAZIONI UTENTE</h2>
         <br>
 
         <p class="single_copy_meta2"> <strong>Nome : </strong>&emsp;${user.username}</p>
@@ -38,8 +39,15 @@
         </p>
         <br>
         <p class="centro">
-          <a href="${contextPath}/modifyAccount" class="button_dettagli allinea">MODIFICA ACCOUNT</a>
-          <a href="${contextPath}/account/deleteMe" class="button_disdici allinea">ELIMINA ACCOUNT</a>
+          <a href="${contextPath}/modifyAccount" class="button_dettagli allinea" style="float: right;">MODIFICA ACCOUNT</a>
+          <div class="btn">
+			<div class="btn-back">
+				<p>Are you sure you want to do that?</p>				
+                <button class="yes" onclick="location.href='${contextPath}/account/deleteMe';">Yes</button>
+				<button class="no" >No</button>
+			</div>
+			<div class="btn-front">ELIMINA ACCOUNT </div>
+		</div>
         </p>
         <br><br>
       </div>
@@ -50,7 +58,7 @@
 
  
   <section class="cards clearfix" >
-    <h1>EVENTI A CUI TI SEI UNITO</h1>
+    <h1 class="font-effect-fire-animation">EVENTI A CUI TI SEI UNITO</h1>
     <c:forEach items="${Events}" var="event" varStatus="tagStatus">
     <div class="card">
         <img class="card_image" src="${contextPath}/resources/images/LogoEventi.jpg" alt="Nature">
@@ -76,7 +84,7 @@
     </section>
     
     <section class="cards clearfix" >
-    <h1>EVENTI CHE HAI CREATO</h1>
+    <h1 class="font-effect-fire-animation">EVENTI CHE HAI CREATO</h1>
     <c:forEach items="${owner}" var="event" varStatus="tagStatus">
     <div class="card">
         <img class="card_image" src="${contextPath}/resources/images/myevents.jpg" alt="Nature">

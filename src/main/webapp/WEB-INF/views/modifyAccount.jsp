@@ -5,7 +5,7 @@
       <div class="cover_filter"></div>
       <div class="cover_caption">
         <div class="cover_caption_copy">
-            <h1>Modifica Account</h1>
+            <h1 class="font-effect-fire-animation">Modifica Account</h1>
         </div>
       </div>
     </section>

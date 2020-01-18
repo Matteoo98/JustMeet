@@ -7,16 +7,16 @@
 <html lang="en"> 
   <head> 
     <meta charset="utf-8"> 
-    <title>JustMeet</title> 
+    <title >JustMeet</title> 
     <!-- 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
     --> 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> 
     <link rel="stylesheet" href="${contextPath}/resources/css/style.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"> 
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        
-     
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">     
+     <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Rancho&effect=fire-animation|3d-float">
       <!-- 
       <link rel="stylesheet" href="${contextPath}/resources/css/common.css" > 
     <link href="${contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">  
@@ -32,7 +32,8 @@
             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/> 
         </form> 
   <header class="header clearfix"> 
-      <a href="${contextPath}/welcome" class="header_logo">JustMeet</a> 
+  
+      <a href="${contextPath}/welcome" class="header_logo font-effect-fire-animation">JUST MEET</a> 
       <a href="" class="header_icon-bar"> 
         <span></span> 
         <span></span> 
@@ -40,28 +41,28 @@
       </a> 
       <ul class="header_menu animate"> 
        
-        <li class="header_menu_item"><a href="${contextPath}/welcome">Home</a></li> 
-        <li class="header_menu_item"><a href="${contextPath}/account">Account</a></li> 
+        <li class="header_menu_item font-effect-fire-animation"><a href="${contextPath}/welcome">Home</a></li> 
+        <li class="header_menu_item font-effect-fire-animation"><a href="${contextPath}/account">Account</a></li> 
   <li class="nav-item dropdown header_menu_item"> 
-        <a class="header_menu_item" href="${contextPath}/eventi" id="navbarDropdown" role="button"  aria-haspopup="true" aria-expanded="false"> 
+        <a class="header_menu_item font-effect-fire-animation" href="${contextPath}/eventi" id="navbarDropdown" role="button"  aria-haspopup="true" aria-expanded="false"> 
           Eventi 
         </a> 
         
         <div class="dropdown-menu dropdown_color" aria-labelledby="navbarDropdown"> 
-          <a class="dropdown-item" href="${contextPath}/sport">Sport</a> 
+          <a class="dropdown-item font-effect-fire-animation" href="${contextPath}/sport">Sport</a> 
           <div class="dropdown-divider"></div> 
-          <a class="dropdown-item" href="${contextPath}/studio">Studio</a> 
+          <a class="dropdown-item font-effect-fire-animation" href="${contextPath}/studio">Studio</a> 
           <div class="dropdown-divider"></div> 
-          <a class="dropdown-item" href="${contextPath}/giochi">Games</a> 
+          <a class="dropdown-item font-effect-fire-animation" href="${contextPath}/giochi">Games</a> 
         </div> 
       </li> 
-      <li class="header_menu_item"><a href="${contextPath}/amici">Amici</a></li>
-        <li class="header_menu_item">
+      <li class="header_menu_item font-effect-fire-animation"><a href="${contextPath}/amici">Amici</a></li>
+        <li class="header_menu_item font-effect-fire-animation">
         <a role="button" class="" href="${contextPath}/notifiche">        
-  Notifiche <span class="badge badge-primary">${notifiche}</span>
+  Notifiche <span class="badge badge-warning">${notifiche}</span>
   </a>
        </li>
-        <li class="header_menu_item"><a onclick="document.forms['logoutForm'].submit()">Logout</a></li> 
+        <li class="header_menu_item font-effect-fire-animation"><a onclick="document.forms['logoutForm'].submit()">Logout</a></li> 
       </ul> 
     </header> 
     <body>

@@ -4,7 +4,7 @@
     
     <form:form action="eventCreator" method="POST" modelAttribute="eventForm" class="form-signin">
     
-            <h2 class="form-signin-heading">Create your event</h2>
+            <h2 class="form-signin-heading font-effect-fire-animation">Create your event</h2>
             
             <spring:bind path="name">
                 <div class="form-group ${status.error ? 'has-error' : ''}">

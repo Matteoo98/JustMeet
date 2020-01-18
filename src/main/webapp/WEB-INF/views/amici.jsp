@@ -1,15 +1,22 @@
 <%@ include file = "common/header.jspf"%>
-
+<section class="cover cover--single">
+      <div class="cover_filter"></div>
+      <div class="cover_caption">
+        <div class="cover_caption_copy">
+            <h1 class="font-effect-fire-animation">AMICI</h1>
+        </div>
+      </div>
+    </section>
 <br>
-
+<div id="myBtnContainer" class="button_Sh_My allinea_dx">
 <form:form class="form-inline my-2 my-lg-0" name="searchFriend" action="amici/search" method="POST">
       <input class="form-control mr-sm-2" type="search" name="searchFriend" placeholder="Cerca nuovi amici.." aria-label="Search">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i> Cerca</button>
 </form:form>
-
+</div>
 
 <section class="cards clearfix" >
-    <h1>I tuoi amici : </h1>
+    <h1 class="font-effect-fire-animation">I tuoi amici : </h1>
 
     <c:forEach items="${listaAmici}" var="user" varStatus="tagStatus">
     
@@ -45,7 +52,7 @@
     </section>
 
 <section class="cards clearfix" >
-    <h1>Tutti gli utenti : </h1>
+    <h1 class="font-effect-fire-animation">Tutti gli utenti : </h1>
     <c:forEach items="${tutti}" var="user" varStatus="tagStatus">
     <div class="card">
 

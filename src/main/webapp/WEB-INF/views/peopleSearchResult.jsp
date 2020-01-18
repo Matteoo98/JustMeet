@@ -3,7 +3,7 @@
 
 
 <section class="cards clearfix" >
-    <h1>Risultati della ricerca : </h1>
+    <h1  class="font-effect-fire-animation">Risultati della ricerca : </h1>
     <c:forEach items="${ricercati}" var="user" varStatus="tagStatus">
     <div class="card">
         <img class="card_image" src="${contextPath}/resources/images/persona.jpg" alt="Nature">

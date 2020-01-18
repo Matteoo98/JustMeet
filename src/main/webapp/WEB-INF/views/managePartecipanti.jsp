@@ -4,13 +4,13 @@
       <div class="cover_filter"></div>
       <div class="cover_caption">
         <div class="cover_caption_copy">
-          <h1>Gestione Partecipanti</h1>
+          <h1 class="font-effect-fire-animation">Gestione Partecipanti</h1>
         </div>
       </div>
     </section>
 
 <section class="cards clearfix" >
-    <h1>Partecipanti : </h1>
+    <h1 class="font-effect-fire-animation">Partecipanti : </h1>
     <c:forEach items="${lista}" var="user" varStatus="tagStatus">
     <div class="card">
         <img class="card_image" src="${contextPath}/resources/images/persona.jpg" alt="Nature">

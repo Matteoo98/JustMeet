@@ -4,14 +4,14 @@
       <div class="cover_filter"></div>
       <div class="cover_caption">
         <div class="cover_caption_copy">
-            <h1>CENTRO NOTIFICHE</h1>
+            <h1 class="font-effect-fire-animation">CENTRO NOTIFICHE</h1>
         </div>
       </div>
     </section>
 
     <article class="single">
       <div class="single_copy">
-        <h2 class="single_copy_title">RICHIESTE PARTECIPAZIONE EVENTO</h2>
+        <h2 class="single_copy_title font-effect-fire-animation">RICHIESTE PARTECIPAZIONE EVENTO</h2>
         <c:forEach items="${notificherichieste}" var="notifica" varStatus="tagStatus">
         <p class="single_copy_meta"> Il ${notifica.day}/${notifica.month}/${notifica.year} alle ${notifica.ora}:${notifica.minuti} </p>
         <p>${notifica.descrizione}</p>
@@ -25,7 +25,7 @@
         <hr width=70%; align="center";> 
         <br>
 
-        <h2 class="single_copy_title">RICHIESTE AMICIZIA</h2>
+        <h2 class="single_copy_title font-effect-fire-animation">RICHIESTE AMICIZIA</h2>
         <c:forEach items="${notificheamicizia}" var="notifica" varStatus="tagStatus">
         <p class="single_copy_meta"> Il ${notifica.day}/${notifica.month}/${notifica.year} alle ${notifica.ora}:${notifica.minuti} </p>
         <p>${notifica.descrizione}</p>

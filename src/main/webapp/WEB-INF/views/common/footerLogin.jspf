@@ -1,6 +1,6 @@
 </body>
 <footer class="footer_login">
-      <p>Copyright - 2019 Romans98 & Teo98</p>
+      <p class=font-effect-fire-animation>Copyright - 2019 Romans98 & Teo98</p>
     </footer>
      
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
