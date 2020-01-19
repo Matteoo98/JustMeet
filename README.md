@@ -21,3 +21,7 @@ PER CAMBIARE I DIAGRAMMI CON ALTRE FORME CLICCARE IL LINK : https://developers.g
 *********** UTILS **********
 
 Se uno volesse testare l'app da local host sull'internet pubblico basta scaricare ngrok 
+
+*********** G Analytics & G TagManager **********
+https://analytics.google.com/analytics/web/?authuser=1#/report-home/a156524613w220499478p209762274
+https://tagmanager.google.com/?authuser=1&utm_campaign=SuiteHeader&utm_source=UniversalPicker&utm_medium=getStarted#/container/accounts/6000404542/containers/30438984/workspaces/3
