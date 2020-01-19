@@ -34,10 +34,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">     
      <link rel="stylesheet"
   href="https://fonts.googleapis.com/css?family=Rancho&effect=fire-animation|3d-float">
+  <link rel="stylesheet" href="${contextPath}/resources/css/background.css"> 
       <!-- 
       <link rel="stylesheet" href="${contextPath}/resources/css/common.css" > 
-    <link href="${contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">  
---> 
+    
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
     <!-- 
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
