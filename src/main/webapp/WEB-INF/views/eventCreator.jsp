@@ -2,7 +2,7 @@
 
     <div class="container">
     
-    <form:form action="eventCreator" method="POST" modelAttribute="eventForm" class="form-signin">
+    <form:form action="eventCreator" method="POST" modelAttribute="eventForm" class="form-signin" id="contattaci">
     
             <h2 class="form-signin-heading font-effect-fire-animation">Create your event</h2>
             
