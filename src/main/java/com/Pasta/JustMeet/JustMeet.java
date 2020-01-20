@@ -20,7 +20,7 @@ public class JustMeet extends SpringBootServletInitializer {
 
 
 
-// TODO : 5.SpringTest (difficult) inter merda
+// TODO : 5.SpringTest (difficult)
 // TODO : 7. factory or builder per la creazione delle notifiche (medium)
 
 
