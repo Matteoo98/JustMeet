@@ -25,3 +25,7 @@ Se uno volesse testare l'app da local host sull'internet pubblico basta scaricar
 *********** G Analytics & G TagManager **********
 https://analytics.google.com/analytics/web/?authuser=1#/report-home/a156524613w220499478p209762274
 https://tagmanager.google.com/?authuser=1&utm_campaign=SuiteHeader&utm_source=UniversalPicker&utm_medium=getStarted#/container/accounts/6000404542/containers/30438984/workspaces/3
+
+***** ngrok *****
+ ./ngrok http 8080 
+ https://www.antonioscatoloni.it/blog/2016/05/04/introduzione-a-ngrok
