@@ -8,7 +8,7 @@ google.charts.load("current", {packages:["corechart"]});
         ]);
 
         var options = {
-          title: 'JustMeet Statistics',
+          title: 'Eventi creati',
           backgroundColor: '#eee',
           colors: ['black','grey'],
           is3D: true,

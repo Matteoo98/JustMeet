@@ -4,14 +4,14 @@
       <div class="cover_filter"></div>
       <div class="cover_caption">
         <div class="cover_caption_copy">
-            <h1 class="font-effect-fire-animation">Just Meet</h1>
+            <h1>Just Meet</h1>
         </div>
       </div>
     </section>
 
     <article class="single">
       <div class="single_copy">
-        <h2 class="single_copy_title font-effect-fire-animation">Dettagli Evento</h2>
+        <h2 class="single_copy_title">Dettagli Evento</h2>
         <br>
 
         <p class="single_copy_meta2"> <strong>Nome Evento : </strong>&emsp;${evento.name}</p>
@@ -41,7 +41,7 @@
         </p>
         <br>
 
-        <a class="btn btn-outline-success font-effect-fire-animation" href="javascript:history.go(-1)" onMouseOver="self.status=document.referrer;return true">
+        <a class="btn btn-outline-success" href="javascript:history.go(-1)" onMouseOver="self.status=document.referrer;return true">
           Torna a Eventi</a>
 
       </div>

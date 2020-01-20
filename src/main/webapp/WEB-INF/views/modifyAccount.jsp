@@ -5,14 +5,15 @@
       <div class="cover_filter"></div>
       <div class="cover_caption">
         <div class="cover_caption_copy">
-            <h1 class="font-effect-fire-animation">Modifica Account</h1>
+            <h1>Modifica Account</h1>
         </div>
       </div>
     </section>
 <div class="container">
  <form:form action="modifyAccount" method="POST" modelAttribute="modifyAccount" class="form-signin">
     
-            <h2 class="form-signin-heading">Modify your account</h2>
+    		<br>
+            <h2 class="form-signin-heading">Modifica il tuo account</h2>
             
             <spring:bind path="username">
                 <div class="form-group ${status.error ? 'has-error' : ''}">

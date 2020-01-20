@@ -4,7 +4,12 @@
     
     <form:form action="eventCreator" method="POST" modelAttribute="eventForm" class="form-signin" id="contattaci">
     
-            <h2 class="form-signin-heading font-effect-fire-animation">Create your event</h2>
+    		<br>
+    		<br>
+    		<br>
+    
+            <h2 class="form-signin-heading">Crea un evento</h2>
+            <br>
             
             <spring:bind path="name">
                 <div class="form-group ${status.error ? 'has-error' : ''}">

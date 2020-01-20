@@ -31,9 +31,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> 
     <link rel="stylesheet" href="${contextPath}/resources/css/style.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"> 
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">     
-     <link rel="stylesheet"
-  href="https://fonts.googleapis.com/css?family=Rancho&effect=fire-animation|3d-float">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">     
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rancho&effect=neon">
   
       <!-- 
       <link rel="stylesheet" href="${contextPath}/resources/css/common.css" > 
@@ -50,7 +49,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </form> 
   <header class="header clearfix"> 
   
-      <a href="${contextPath}/welcome" class="header_logo font-effect-fire-animation">JUST MEET</a> 
+      <a href="${contextPath}/welcome" class="header_logo font-effect-neon">JUST MEET</a> 
       <a href="" class="header_icon-bar"> 
         <span></span> 
         <span></span> 
@@ -58,28 +57,28 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </a> 
       <ul class="header_menu animate"> 
        
-        <li class="header_menu_item font-effect-fire-animation"><a href="${contextPath}/welcome">Home</a></li> 
-        <li class="header_menu_item font-effect-fire-animation"><a href="${contextPath}/account">Account</a></li> 
+        <!-- <li class="header_menu_item"><a href="${contextPath}/welcome">Home</a></li> -->
+        <li class="header_menu_item"><a href="${contextPath}/account">Account</a></li> 
   <li class="nav-item dropdown header_menu_item"> 
-        <a class="header_menu_item font-effect-fire-animation" href="${contextPath}/eventi" id="navbarDropdown" role="button"  aria-haspopup="true" aria-expanded="false"> 
+        <a class="header_menu_item" href="${contextPath}/eventi" id="navbarDropdown" role="button"  aria-haspopup="true" aria-expanded="false"> 
           Eventi 
         </a> 
         
         <div class="dropdown-menu dropdown_color" aria-labelledby="navbarDropdown"> 
-          <a class="dropdown-item font-effect-fire-animation" href="${contextPath}/sport">Sport</a> 
+          <a class="dropdown-item" href="${contextPath}/sport">Sport</a> 
           <div class="dropdown-divider"></div> 
-          <a class="dropdown-item font-effect-fire-animation" href="${contextPath}/studio">Studio</a> 
+          <a class="dropdown-item" href="${contextPath}/studio">Studio</a> 
           <div class="dropdown-divider"></div> 
-          <a class="dropdown-item font-effect-fire-animation" href="${contextPath}/giochi">Games</a> 
+          <a class="dropdown-item" href="${contextPath}/giochi">Games</a> 
         </div> 
       </li> 
-      <li class="header_menu_item font-effect-fire-animation"><a href="${contextPath}/amici">Amici</a></li>
-        <li class="header_menu_item font-effect-fire-animation">
+      <li class="header_menu_item"><a href="${contextPath}/amici">Amici</a></li>
+        <li class="header_menu_item">
         <a role="button" class="" href="${contextPath}/notifiche">        
   Notifiche <span class="badge badge-warning">${notifiche}</span>
   </a>
        </li>
-        <li class="header_menu_item font-effect-fire-animation"><a onclick="document.forms['logoutForm'].submit()">Logout</a></li> 
+        <li class="header_menu_item"><a onclick="document.forms['logoutForm'].submit()">Logout</a></li> 
       </ul> 
     </header> 
     <body>

@@ -4,14 +4,15 @@
       <div class="cover_filter"></div>
       <div class="cover_caption">
         <div class="cover_caption_copy">
-            <h1 class="font-effect-fire-animation">Modifica Evento</h1>
+            <h1>Modifica Evento</h1>
         </div>
       </div>
     </section>
 <div class="container">
  <form:form action="adminEvent" method="POST" modelAttribute="adminEvent" class="form-signin">
     
-            <h2 class="form-signin-heading">Modify your event</h2>
+            <br>
+            <h2 class="form-signin-heading">Modifica il tuo evento</h2>
             
             <spring:bind path="name">
                 <div class="form-group ${status.error ? 'has-error' : ''}">

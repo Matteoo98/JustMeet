@@ -1,9 +1,13 @@
-<%@ include file = "common/header.jspf"%>
+<%@ include file = "common/headerIndex.jspf"%>
 
     <div class="container">
 
         <form:form method="POST" modelAttribute="userForm" class="form-signin" id="contattaci">
-            <h2 class="form-signin-heading font-effect-fire-animation">Create your account</h2>
+        
+        <br><br><br>
+        
+            <h2 class="form-signin-heading">Create your account</h2>
+            <br>
             <spring:bind path="username">
                 <div class="form-group ${status.error ? 'has-error' : ''}">
                     <form:input type="text" path="username" class="form-control" placeholder="Username"

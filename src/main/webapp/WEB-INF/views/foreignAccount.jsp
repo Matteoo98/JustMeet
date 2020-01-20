@@ -5,7 +5,7 @@
       <div class="cover_filter"></div>
       <div class="cover_caption">
         <div class="cover_caption_copy">
-          <h1 class="font-effect-fire-animation">Just Meet</h1>
+          <h1>Just Meet</h1>
         </div>
       </div>
     </section>
@@ -15,7 +15,7 @@
 
     <article class="single">
       <div class="single_copy">
-        <h2 class="single_copy_title font-effect-fire-animation">INFORMAZIONI UTENTE</h2>
+        <h2 class="single_copy_title">INFORMAZIONI UTENTE</h2>
         <p></p>
         <p class="single_copy_meta"> Nome : </p>
         <p>${user.username}</p>
