@@ -8,7 +8,7 @@ google.charts.load("current", {packages:["corechart"]});
         ]);
 
         var options = {
-          title: 'JustMeet Statistics',
+          title: 'UTENTI - EVENTI',
           backgroundColor: '#eee',
           is3D: true,
         };

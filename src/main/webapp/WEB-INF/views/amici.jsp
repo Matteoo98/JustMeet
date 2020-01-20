@@ -3,7 +3,7 @@
       <div class="cover_filter"></div>
       <div class="cover_caption">
         <div class="cover_caption_copy">
-            <h1 class="font-effect-fire-animation">AMICI</h1>
+            <h1>AMICI</h1>
         </div>
       </div>
     </section>
@@ -16,7 +16,7 @@
 </div>
 
 <section class="cards clearfix" >
-    <h1 class="font-effect-fire-animation">I tuoi amici : </h1>
+    <h1>Tuoi amici : </h1>
 
     <c:forEach items="${listaAmici}" var="user" varStatus="tagStatus">
     
@@ -26,6 +26,14 @@
           <c:when test="${user.username=='Noyz Narcos'}">
               <img class="card_image" src="http://3.citynews-latinatoday.stgy.ovh/~media/original-hi/45112367075825/noyz-12-2.jpg" alt="Nature">
           </c:when> 
+          
+          <c:when test="${user.username=='Pato07'}">
+              <img class="card_image" src="https://i.pinimg.com/originals/d4/51/00/d4510008149492dd4d554d20d426bea9.jpg">
+          </c:when>
+          
+          <c:when test="${user.username=='Kaka22'}">
+              <img class="card_image" src="https://www.pianetamilan.it/wp-content/uploads/sites/23/2016/03/Kak%C3%A0_Milan_Chievo_2013_Getty_Images.jpg" alt="Nature">
+          </c:when>
 
           <c:otherwise>
             <img class="card_image" src="${contextPath}/resources/images/persona.jpg" alt="Nature">
@@ -52,13 +60,21 @@
     </section>
 
 <section class="cards clearfix" >
-    <h1 class="font-effect-fire-animation">Tutti gli utenti : </h1>
+    <h1>Tutti gli utenti : </h1>
     <c:forEach items="${tutti}" var="user" varStatus="tagStatus">
     <div class="card">
 
         <c:choose>
           <c:when test="${user.username=='Kaka22'}">
               <img class="card_image" src="https://www.pianetamilan.it/wp-content/uploads/sites/23/2016/03/Kak%C3%A0_Milan_Chievo_2013_Getty_Images.jpg" alt="Nature">
+          </c:when>
+          
+          <c:when test="${user.username=='Pato07'}">
+              <img class="card_image" src="https://i.pinimg.com/originals/d4/51/00/d4510008149492dd4d554d20d426bea9.jpg">
+          </c:when> 
+          
+          <c:when test="${user.username=='Noyz Narcos'}">
+              <img class="card_image" src="http://3.citynews-latinatoday.stgy.ovh/~media/original-hi/45112367075825/noyz-12-2.jpg" alt="Nature">
           </c:when> 
 
           <c:otherwise>

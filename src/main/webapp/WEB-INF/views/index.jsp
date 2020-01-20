@@ -10,8 +10,8 @@ var y = ${numeroeventi}
       <div class="cover_filter"></div>
       <div class="cover_caption">
         <div class="cover_caption_copy">
-            <h1 class=font-effect-fire-animation>Just Meet</h1>
-            <h2 class=font-effect-fire-animation>Per trovare il decimo a calcetto</h2>
+            <h1>Just Meet</h1>
+            <h2>Per trovare il decimo a calcetto</h2>
             <a href="${contextPath}/login" class="button ">Login</a> | <a href="${contextPath}/registration" class="button">Registration</a>
         </div>
       </div>

@@ -4,7 +4,7 @@
       <div class="cover_filter"></div>
       <div class="cover_caption">
         <div class="cover_caption_copy">
-          <h1 class="font-effect-fire-animation">Eventi</h1>
+          <h1>Eventi</h1>
           
           <a href="${contextPath}/eventCreator" class="button ">Crea un evento</a>
         </div>
@@ -39,10 +39,10 @@
           <p>${list.description}</p>
           <p>${list.luogo}</p>
 
-          <div class="allinea">
+          <div class="allinea allinea_par_dett">
             <a href="${contextPath}/eventi/askToJoin?idevento=${list.id}" class="button_partecipa">Partecipa</a>
           </div>
-          <div class="allinea">
+          <div class="allinea allinea_par_dett">
             <a href="${contextPath}/eventi/getEventId?idEvento=${list.id}" class="button_dettagli">Dettagli</a>
           </div>
         </div>
@@ -54,7 +54,7 @@
     
     
      <section class="cards clearfix">
-    <h1 class="font-effect-fire-animation">EVENTI SUGGERITI IN BASE ALLE PREFERENZE</h1>
+    <h1>EVENTI SUGGERITI IN BASE ALLE PREFERENZE</h1>
     <c:forEach items="${mymatchlist}" var="list" varStatus="tagStatus">
     <div class="filterDiv mymatch" >
     <div class="card " >

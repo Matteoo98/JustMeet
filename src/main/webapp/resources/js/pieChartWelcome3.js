@@ -8,7 +8,7 @@ google.charts.load("current", {packages:["corechart"]});
         ]);
 
         var options = {
-          title: 'JustMeet Statistics',
+          title: 'Amicizie',
           backgroundColor: '#eee',
           is3D: true,
         };

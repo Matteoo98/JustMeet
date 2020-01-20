@@ -14,8 +14,8 @@ var p =	${numeroAmici};
       <div class="cover_filter"></div>
       <div class="cover_caption">
         <div class="cover_caption_copy">
-            <h1 class="font-effect-fire-animation">JUST MEET</h1>
-            <h2 class="font-effect-fire-animation">Benvenuto ${principal}</h2>
+            <h1>JUST MEET</h1>
+            <h2>Benvenuto ${principal}</h2>
         </div>
       </div>
     </section>
