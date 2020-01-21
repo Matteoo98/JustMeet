@@ -51,6 +51,7 @@ public class amiciController {
 		User user1 = userRepository.findByUsername(authentication.getName());
 		User user2 = userRepository.findByUsername(username);
 		userService.richiestaAmicizia(user1,user2);
+		
 		return "redirect:/amici";
 	}
 	@PostMapping("/amici/search")

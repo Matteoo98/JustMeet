@@ -1,0 +1,95 @@
+/* ********************** 
+          SMARTPHONE 
+********************** */
+@media (max-width:767px)
+{
+.nascondi {	display: inline; }
+
+/* Header */
+.header { position: fixed; z-index: 100; width: 100%; }
+
+.header_icon-bar { display: block; }
+
+.header_menu { width: 100%; height: 0px; overflow: hidden; }
+
+.header_menu_item { display: block; }
+
+.is-open {
+	height: 300px;
+	overflow: auto;
+}
+
+/* Footer */
+.footer_login {
+	background: #333;
+	padding: 30px;
+	color: #fff;
+	margin-top: 70%;
+}
+
+.banner_notify {
+	background: #fff;
+	height: 38%;
+	margin: 40px auto;
+}
+
+/* Buttons */
+.button_dettagli_account {
+	display: inline-block;
+	background: #28a745;
+	color: #fff;
+	padding: 15px 10px;
+	border-radius: 3px;
+	text-decoration: none;
+	margin-top: 1%;
+} 
+.button_elimina_account {
+	display: inline-block;
+	background: #C82333;
+	color: #fff;
+	padding: 15px 72px;
+	border-radius: 3px;
+	text-decoration: none;
+	margin-left: 33%;
+	float: left;
+	margin-left: 5px;
+}
+.allinea_modifica_account {
+	float: left;
+	margin-left: 50px;
+} 
+.allinea3 {
+	float: left;
+	margin-left: 10px;
+}
+.allinea_dett_dis{
+	float: left;
+	margin-left: 23px;
+}
+.allinea_par_dett{
+	float: left;
+	margin-left: 10px;
+}
+
+/* Cover */
+.cover {
+	height: 100%;
+}
+
+/* Cards */
+.card {
+	width: 90%;
+	margin: 5%;
+}
+
+/* Banner */
+.banner {
+	height: 100%;
+}
+
+.banner_image, .banner_copy {
+	width: 100%;
+	height: 50%;
+}
+
+}

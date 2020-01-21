@@ -46,40 +46,7 @@
 <header>
 	 
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  		<a class="navbar-brand font-effect-fire-animation" href="${contextPath}/welcome">JUST MEET</a>
-  		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    		<span class="navbar-toggler-icon"></span>
-  		</button>
-  		<div class="collapse navbar-collapse" id="navbarNavDropdown">
-    		<ul class="nav navbar-nav ml-auto p-1">
-      		<li class="nav-item">
-        		<a class="nav-link" href="${contextPath}/account">Account</a>
-      		</li>
-      		
-      		<li class="nav-item dropdown">
-        		<a class="nav-link" href="${contextPath}/eventi" id="navbarDropdownMenuLink" role="button"  aria-haspopup="true" aria-expanded="false">
-          		Eventi
-        		</a>
-        		<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          		<a class="dropdown-item nav-link" href="${contextPath}/sport">Sport</a>
-          		<a class="dropdown-item nav-link" href="${contextPath}/studio">Studio</a>
-          		<a class="dropdown-item nav-link" href="${contextPath}/giochi">Games</a>
-        		</div>
-      		</li>
-      		
-      		<li class="nav-item">
-        		<a class="nav-link" href="${contextPath}/amici">Amici</a>
-      		</li>
-      		
-      		<li class="nav-item">
-        		<a class="nav-link" href="${contextPath}/notifiche">Notifiche<span class="badge badge-warning">${notifiche}</span></a>
-      		</li>
-      		      		
-      		<li class="nav-item">
-        		<a class="nav-link" onclick="document.forms['logoutForm'].submit()">Logout</a>
-      		</li>
-    		</ul>
-  		</div>
+  		<a class="navbar-brand font-effect-fire-animation" href="${contextPath}/index">JUST MEET</a>
 	</nav>
 
 	

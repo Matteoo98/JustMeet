@@ -40,7 +40,7 @@
           <p>${list.luogo}</p>
 
           <div class="allinea allinea_par_dett">
-            <a href="${contextPath}/eventi/askToJoin?idevento=${list.id}" class="button_partecipa">Partecipa</a>
+            <a href="${contextPath}/eventi/askToJoin?idevento=${list.id}" class="button_partecipa" onclick="myFunctionPartecipa()">Partecipa</a>
           </div>
           <div class="allinea allinea_par_dett">
             <a href="${contextPath}/eventi/getEventId?idEvento=${list.id}" class="button_dettagli">Dettagli</a>

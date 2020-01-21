@@ -51,13 +51,15 @@ public class managePartecipantiController {
 		Set<User> lista = evento.getUsers();
 		model.addAttribute("lista", lista);
 		model.addAttribute("idevento", evento.getId());
+		
 		if(search!=null) {
 		User user = userRepository.findByUsername(search);
-		if(user!=null) {
-		ArrayList<User> ricercati = new ArrayList<User>();
-		ricercati.add(user);
-		model.addAttribute("ricercati", ricercati);
-		}
+		
+			if(user!=null) {
+					ArrayList<User> ricercati = new ArrayList<User>();
+					ricercati.add(user);
+					model.addAttribute("ricercati", ricercati);
+			}
 		}
 		return "managePartecipanti";
 	}

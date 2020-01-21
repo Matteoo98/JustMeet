@@ -1,4 +1,5 @@
 <%@ include file = "common/headerBootstrap.jspf"%>
+
 <section class="cover cover--single">
       <div class="cover_filter"></div>
       <div class="cover_caption">
@@ -96,7 +97,7 @@
           </div>
           
           <div class="allinea">
-            <a href="${contextPath}/amici/add?username=${user.username}" class="button_partecipa">Aggiungi</a>
+            <a href="${contextPath}/amici/add?username=${user.username}" class="button_partecipa" onclick="myFunctionAmicizia()">Aggiungi</a>
           </div>
 
         </div>
@@ -104,6 +105,9 @@
     </c:forEach>
       
     </section>
-
+     
+     
+     
+     
 
 <%@ include file = "common/footer.jspf"%>

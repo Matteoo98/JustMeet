@@ -10,6 +10,7 @@ var p =	${numeroAmici};
 <script src="${contextPath}/resources/js/pieChartWelcome.js"></script>
 <script src="${contextPath}/resources/js/pieChartWelcome2.js"></script>
 <script src="${contextPath}/resources/js/pieChartWelcome3.js"></script>
+
     <section class="cover">
       <div class="cover_filter"></div>
       <div class="cover_caption">
