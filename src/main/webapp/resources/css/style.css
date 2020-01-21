@@ -106,7 +106,9 @@ body {
 	text-decoration: none;
 	float: left;
 }
-
+button_elimina_account {
+	display: none;
+}
 .button:hover {
 	text-decoration: none;
 }
@@ -174,6 +176,9 @@ a:hover {
 .header {
 	background: #333
 }
+.navbar-nav > li > .dropdown-menu  { background-color: #343a40;}  
+.dropdown .dropdown-menu .dropdown-item:active, .dropdown .dropdown-menu .dropdown-item:hover{background-color: #343a40;}
+
 
 .header_logo {
 	color: #fff;
@@ -191,6 +196,10 @@ a:hover {
 	float: right;
 	margin: 0;
 	padding: 0;
+}
+.header_dx {
+	float: right;
+	margin-right: 70%;
 }
 
 .header_menu_item {
@@ -435,7 +444,6 @@ a:hover {
 	color: #fff;
 	margin-top: 85px;
 }
-
 .footer_index {
 	background: #333;
 	padding: 30px;
@@ -481,13 +489,17 @@ a:hover {
 .single_copy_title {
 	font-size: 32px;
 }
-
+.nascondi {
+	display: none;
+}
 /* ********************** 
           SMARTPHONE 
 ********************** */
 @media (max-width:767px)
 {
-
+.nascondi {
+	display: inline;
+}
 /* Header */
 .header {
 	position: fixed;
@@ -538,6 +550,17 @@ a:hover {
 	text-decoration: none;
 	margin-top: 1%;
 } 
+.button_elimina_account {
+	display: inline-block;
+	background: #C82333;
+	color: #fff;
+	padding: 15px 72px;
+	border-radius: 3px;
+	text-decoration: none;
+	margin-left: 33%;
+	float: left;
+	margin-left: 5px;
+}
 .allinea_modifica_account {
 	float: left;
 	margin-left: 50px;

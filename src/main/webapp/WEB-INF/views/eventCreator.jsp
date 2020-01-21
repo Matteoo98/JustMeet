@@ -1,4 +1,4 @@
-<%@ include file = "common/header.jspf"%>
+<%@ include file = "common/headerBootstrap.jspf"%>
 
     <div class="container">
     

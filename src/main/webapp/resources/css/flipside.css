@@ -107,7 +107,7 @@
 {
 	@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
 
-
+/*
 .description {
   margin-top: 50px;
   text-align: center;
@@ -131,12 +131,21 @@
   transform-origin: 50% 50%;
   text-align: center; 
   }
-  
+ */
+ .btn {
+ 	display: none;
+ }
+ .btn-back {
+ 	display: none;
+ }
+ .btn-front {
+ 	display: none;
+ }
   .allinea2 {
 	float: left;
 	margin-left: 18px;
 }
-
+/*
 .btn-front {
   position: absolute;
   display: block;
@@ -213,4 +222,5 @@
 
 .btn[data-direction="left"].is-open {
   transform: rotateY(-180deg); }
+  */
 }

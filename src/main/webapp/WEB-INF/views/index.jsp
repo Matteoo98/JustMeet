@@ -1,4 +1,4 @@
-<%@ include file = "common/headerIndex.jspf"%>
+<%@ include file = "common/headerBootstrap.jspf"%>
 <script>
 var x = ${numeroutenti}
 var y = ${numeroeventi}

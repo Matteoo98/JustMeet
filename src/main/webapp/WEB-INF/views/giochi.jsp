@@ -1,4 +1,4 @@
-<%@ include file = "common/header.jspf"%>
+<%@ include file = "common/headerBootstrap.jspf"%>
 <body background="${contextPath}/resources/images/CollectionAnimeCharacter.jpg">
 
 <section class="cover_games">

@@ -1,4 +1,4 @@
-<%@ include file="common/header.jspf"%>
+<%@ include file="common/headerBootstrap.jspf"%>
 <link href="${contextPath}/resources/css/flipside.css" rel="stylesheet"
 	type="text/css" />
 
@@ -73,11 +73,16 @@
 	<div class="btn-front allinea allinea2">ELIMINA ACCOUNT</div>
 </div>
 <br>
+<br>
+<br>
+<p class="nascondi">
+	<a href="${contextPath}/account/deleteMe" class="button_elimina_account">ELIMINA ACCOUNT</a>
+</p>
+<br>
 <!-- </p> -->
 <br>
-<br>
-<br>
-<br>
+
+
 </div>
 
 </article>
