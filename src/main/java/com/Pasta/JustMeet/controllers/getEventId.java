@@ -29,12 +29,10 @@ import com.Pasta.JustMeet.service.UserService;
 @Controller
 public class getEventId {
 	
-	@Autowired
-    private UserService userService;
+	
 	@Autowired
     private EventsRepository rep;
-	@Autowired
-    private UserRepository userRep;
+	
 	
 	
 	@GetMapping("/eventi/getEventId")
