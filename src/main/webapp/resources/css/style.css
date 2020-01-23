@@ -568,3 +568,7 @@ form.searchEvent::after {
 	clear: both;
 	display: table;
 }
+.map {
+      height: 400px;
+      width: 100%;
+    }
