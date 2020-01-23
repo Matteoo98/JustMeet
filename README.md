@@ -66,8 +66,8 @@ Give an example
 
 ## Javascript Libraries
 
-*jQuery
-*SweetAlert2
+* jQuery
+* SweetAlert2
 
 ## Analytics
 
@@ -86,7 +86,7 @@ Give an example
 ## Diagrams
 
 * Google Chart Diagrams
-Please refer to this link if you want to change the diagrams : https://developers.google.com/chart/interactive/docs/gallery?hl=it
+* Please refer to this link if you want to change the diagrams : https://developers.google.com/chart/interactive/docs/gallery?hl=it
 
 ## Contributing
 
