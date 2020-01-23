@@ -1,31 +1,114 @@
-*********** COMMIT GITHUB **********
+# JustMeet
 
-1- commit all
-2- push all
+JustMeet is a website for help people to organize events of every type(ex: Sport , Study , Games).
 
-*********** PER SCARICARE CAMBIAMENTI *************
-Per Visual Studio Code :
-git clone https://github.com/Matteoo98/JustMeet.git ---> la prima volta
-git pull https://github.com/Matteoo98/JustMeet.git  ---> per aggiornare i cambiamenti
- 
-PER ECLIPSE :
-tasto destro , team , pull... 
+## Getting Started
 
-Link corretto del repository :
-https://github.com:443/Matteoo98/JustMeet.git
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-*********** GOOGLE DIAGRAMS **********
+### Prerequisites
 
-PER CAMBIARE I DIAGRAMMI CON ALTRE FORME CLICCARE IL LINK : https://developers.google.com/chart/interactive/docs/gallery?hl=it
+What things you need to install the software and how to install them
 
-*********** UTILS **********
+```
+Give examples
+```
 
-Se uno volesse testare l'app da local host sull'internet pubblico basta scaricare ngrok 
+### Installing
 
-*********** G Analytics & G TagManager **********
-https://analytics.google.com/analytics/web/?authuser=1#/report-home/a156524613w220499478p209762274
-https://tagmanager.google.com/?authuser=1&utm_campaign=SuiteHeader&utm_source=UniversalPicker&utm_medium=getStarted#/container/accounts/6000404542/containers/30438984/workspaces/3
+A step by step series of examples that tell you how to get a development env running
 
-***** ngrok *****
- ./ngrok http 8080 
- https://www.antonioscatoloni.it/blog/2016/05/04/introduzione-a-ngrok
+Say what the step will be
+
+```
+Give the example
+```
+
+And repeat
+
+```
+until finished
+```
+
+End with an example of getting some data out of the system or using it for a little demo
+
+## Running the tests
+
+Explain how to run the automated tests for this system
+
+### Break down into end to end tests
+
+Explain what these tests test and why
+
+```
+Give an example
+```
+
+### And coding style tests
+
+Explain what these tests test and why
+
+```
+Give an example
+```
+
+## Deployment
+
+Please download ngrok to simulate a live server
+Use command : ./ngrok http 8080 
+Tutorial : https://www.antonioscatoloni.it/blog/2016/05/04/introduzione-a-ngrok
+
+## Built With
+
+* Spring Boot
+* JSP Page
+* Bootstrap
+
+## Javascript Libraries
+
+*jQuery
+*SweetAlert2
+
+## Analytics
+
+* Google Analytics
+* Google Tag Manager
+
+## Map
+
+* Google Maps
+* Google Chart Diagrams
+
+## Font Script
+* Font Awesome
+* Google Font Api
+
+## Diagrams
+
+* Google Chart Diagrams
+Please refer to this link if you want to change the diagrams : https://developers.google.com/chart/interactive/docs/gallery?hl=it
+
+## Contributing
+
+Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Versioning
+
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+
+## Authors
+
+* **Matteo Molteni** 
+* **Mattia Romagnoli**
+See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* Hat tip to anyone whose code was used
+* Inspiration
+
+
