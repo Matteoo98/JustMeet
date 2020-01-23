@@ -54,9 +54,9 @@ Give an example
 
 ## Deployment
 
-Please download ngrok to simulate a live server
-Use command : ./ngrok http 8080 
-Tutorial : https://www.antonioscatoloni.it/blog/2016/05/04/introduzione-a-ngrok
+* Please download ngrok to simulate a live server
+* Use command : ./ngrok http 8080 
+* Tutorial : https://www.antonioscatoloni.it/blog/2016/05/04/introduzione-a-ngrok
 
 ## Built With
 
