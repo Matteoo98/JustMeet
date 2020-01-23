@@ -100,7 +100,6 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 * **Matteo Molteni** 
 * **Mattia Romagnoli**
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
