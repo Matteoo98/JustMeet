@@ -1,6 +1,6 @@
 # JustMeet
 
-JustMeet is a website for help people to organize events of every type(ex: Sport , Study , Games).
+JustMeet is a website created in order to help people to organize events of every kind (ex: Sport , Study , Games).
 
 ![Alt text](src/main/webapp/resources/images/Screen.png?raw=true "Titolo")
 
