@@ -45,12 +45,12 @@ public class adminEventController {
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 		User user = userRepository.findByUsername(authentication.getName());
 		Events evento = rep.findById(idEvento);
-		
+		model.addAttribute("notifiche", user.getNotifiche().size());
 		if(user.getUsername().equals(evento.getOwner())) {
 			
 			idEventoDaModificare=idEvento;
 			model.addAttribute("adminEvent", new Events());
-			//Events evento = rep.findById(idEvento);
+			
 	    	model.addAttribute("evento", evento);
 	    	
 	    	Set<User> partecipanti = evento.getUsers();

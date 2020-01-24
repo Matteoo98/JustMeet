@@ -14,7 +14,7 @@ import com.Pasta.JustMeet.model.Events;
 import com.Pasta.JustMeet.model.User;
 import com.Pasta.JustMeet.repository.EventsRepository;
 import com.Pasta.JustMeet.repository.UserRepository;
-import com.Pasta.JustMeet.service.UserService;
+
 
 /**
  * @author matti
@@ -23,8 +23,7 @@ import com.Pasta.JustMeet.service.UserService;
 @Controller
 public class indexController {
 	
-	@Autowired
-    private UserService userService;
+	
 	@Autowired
     private UserRepository userRepository;
 	@Autowired
@@ -33,10 +32,10 @@ public class indexController {
 	@GetMapping({ "/" , "/index"})
     public String index(Model model) {
     	List<User> lista= userRepository.findAll();
-    	//model.addAttribute("utenti", lista);
+    	
     	model.addAttribute("numeroutenti",lista.size());
         List<Events> eventi= eventsRepository.findAll();
-        //model.addAttribute("eventi", eventi);
+       
         model.addAttribute("numeroeventi",eventi.size());
         return "index";
     }

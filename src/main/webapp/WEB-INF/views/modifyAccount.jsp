@@ -18,28 +18,28 @@
             <spring:bind path="username">
                 <div class="form-group ${status.error ? 'has-error' : ''}">
                     <form:input type="text" path="username" class="form-control" placeholder="Username"
-                                autofocus="true" value ="${user.username}"></form:input>
+                                autofocus="true" required="true" value ="${user.username}"></form:input>
                     <form:errors path="username"></form:errors>
                 </div>
             </spring:bind>
             
              <spring:bind path="email">
                 <div class="form-group ${status.error ? 'has-error' : ''}">
-                    <form:input type="email" path="email" class="form-control" placeholder="Email" value ="${user.email}"></form:input>
+                    <form:input type="email" path="email" class="form-control" placeholder="Email" value ="${user.email}" autofocus="true" required="true"></form:input>
                     <form:errors path="email"></form:errors>
                 </div>
             </spring:bind>
             
             <spring:bind path="cognome">
                 <div class="form-group ${status.error ? 'has-error' : ''}">
-                    <form:input type="cognome" path="cognome" class="form-control" placeholder="Cognome" value ="${user.cognome}"></form:input>
+                    <form:input type="cognome" path="cognome" class="form-control" placeholder="Cognome" value ="${user.cognome}" autofocus="true" required="true"></form:input>
                     <form:errors path="cognome"></form:errors>
                 </div>
             </spring:bind>
             
             <spring:bind path="citta">
                 <div class="form-group ${status.error ? 'has-error' : ''}">
-                    <form:input type="citta" path="citta" class="form-control" placeholder="Citta" value ="${user.citta}"></form:input>
+                    <form:input type="citta" path="citta" class="form-control" placeholder="Citta" value ="${user.citta}" autofocus="true" required="true"></form:input>
                     <form:errors path="citta"></form:errors>
                 </div>
             </spring:bind>
@@ -49,7 +49,7 @@
             <spring:bind path="preferenceUno">
                <div class="form-group" >
                
-                <form:input class="custom-select" list="sports" type="text" path="preferenceUno" placeholder="your preferences" value ="${user.preferenceUno}"></form:input>
+                <form:input class="custom-select" list="sports" type="text" path="preferenceUno" placeholder="your preferences" value ="${user.preferenceUno}" autofocus="true" required="true"></form:input>
                 
                 <datalist id="sports">
                     <option value="CALCIO"></option>
@@ -65,7 +65,7 @@
 
          <spring:bind path="preferenceDue">
                <div class="form-group" >
-    <form:input class="custom-select" list="faculty" type="text" path="preferenceDue" placeholder="your preferences" value ="${user.preferenceDue}"></form:input>
+    <form:input class="custom-select" list="faculty" type="text" path="preferenceDue" placeholder="your preferences" value ="${user.preferenceDue}" autofocus="true" required="true"></form:input>
     <datalist id="faculty">
     <option value="INFORMATICA">
     <option value="CHIMICA">
@@ -79,7 +79,7 @@
          
          <spring:bind path="preferenceTre">
                <div class="form-group" >
-    <form:input class="custom-select" list="games" type="text" path="preferenceTre" placeholder="your preferences" value ="${user.preferenceTre}"></form:input>
+    <form:input class="custom-select" list="games" type="text" path="preferenceTre" placeholder="your preferences" value ="${user.preferenceTre}" autofocus="true" required="true"></form:input>
     <datalist id="games">
     <option value="FORTNITE">
     <option value="CALL OF DUTY">

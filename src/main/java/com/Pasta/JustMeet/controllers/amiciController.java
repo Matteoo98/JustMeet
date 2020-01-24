@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.Pasta.JustMeet.model.Events;
+
 import com.Pasta.JustMeet.model.User;
 import com.Pasta.JustMeet.repository.UserRepository;
 import com.Pasta.JustMeet.service.UserService;
@@ -31,6 +31,7 @@ public class amiciController {
 		model.addAttribute("listaAmici", user.getAmici());
 		List<User> tutti = userService.listaPersone(user);
 		model.addAttribute("tutti", tutti);
+		model.addAttribute("notifiche", user.getNotifiche().size());
 		
 		return "amici";
 	}

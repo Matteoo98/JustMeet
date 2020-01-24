@@ -2,7 +2,7 @@ package com.Pasta.JustMeet.service;
 
 import java.sql.SQLException;
 import java.util.List;
-import java.util.Set;
+
 
 import com.Pasta.JustMeet.model.*;
 

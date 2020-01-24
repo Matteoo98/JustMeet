@@ -1,7 +1,7 @@
 package com.Pasta.JustMeet.ServiceLayerTest;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
+
 
 
 import org.junit.Before;

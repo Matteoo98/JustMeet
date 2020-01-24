@@ -5,7 +5,7 @@ package com.Pasta.JustMeet.controllers;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.List;
+
 import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,8 +14,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
+
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -41,6 +40,8 @@ public class managePartecipantiController {
 	@GetMapping("/managePartecipanti")
 	public String managePartecipanti(@RequestParam int idEvento ,@RequestParam(required=false) String search, Model model) {
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		User auth = userRepository.findByUsername(authentication.getName());
+		model.addAttribute("notifiche", auth.getNotifiche().size());
 		Events evento = rep.findById(idEvento);
 		if(!(authentication.getName().toLowerCase().contentEquals(evento.getOwner().toLowerCase()))) {
 			

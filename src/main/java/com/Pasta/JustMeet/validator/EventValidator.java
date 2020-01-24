@@ -4,14 +4,14 @@
 package com.Pasta.JustMeet.validator;
 import java.time.LocalDateTime;
 
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
 import com.Pasta.JustMeet.model.*;
-import com.Pasta.JustMeet.service.*;
+
 
 @Component
 public class EventValidator implements Validator {

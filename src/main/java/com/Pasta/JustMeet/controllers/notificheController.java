@@ -5,7 +5,7 @@ package com.Pasta.JustMeet.controllers;
 
 import java.sql.SQLException;
 import java.util.List;
-import java.util.Set;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -14,7 +14,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
+
 
 import com.Pasta.JustMeet.model.Notifiche;
 import com.Pasta.JustMeet.model.User;
@@ -38,20 +38,20 @@ public class notificheController {
 	
 	@GetMapping({ "/notifiche"})
     public String notifiche(Model model) {
-		//ModelAndView map = new ModelAndView("notifiche");
+		
 		userService.controlloScadenzaEventi();
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         User user = userRepository.findByUsername(authentication.getName());
         
         List<Notifiche> notifichecomuni=userService.getNotificheByTipologia("comune",user);
-        //map.addObject("notifichecomuni", notifichecomuni);
+        
         model.addAttribute("notifichecomuni", notifichecomuni);
         List<Notifiche> notificherichieste=userService.getNotificheByTipologia("richiesta",user);
-        //map.addObject("notificherichieste", notificherichieste);
+        
         List<Notifiche> notificheamicizia=userService.getNotificheByTipologia("richiestaAmicizia",user);
         model.addAttribute("notificheamicizia", notificheamicizia);
         model.addAttribute("notificherichieste", notificherichieste);
-        //map.addObject("notifiche", user.getNotifiche().size());
+        
         model.addAttribute("notifiche", user.getNotifiche().size());
         return "notifiche";
     }

@@ -18,7 +18,7 @@ import com.Pasta.JustMeet.model.User;
 import com.Pasta.JustMeet.repository.UserRepository;
 import com.Pasta.JustMeet.service.UserService;
 import com.Pasta.JustMeet.validator.EventValidator;
-import com.Pasta.JustMeet.validator.UserValidator;
+
 
 /**
  * @author matti

@@ -14,7 +14,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
+
 
 import com.Pasta.JustMeet.model.Events;
 import com.Pasta.JustMeet.model.User;
@@ -40,20 +40,16 @@ public class accountController {
     public String account(Model model) {
 		
 		
-    	//nome del tizio che cerco
+    	
     	Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
     	String currentPrincipalName = authentication.getName();
-    	//lista degli utenti
+    
     	ArrayList<User> list = new ArrayList<User>();
-    	//cerco l'utente
+    
     	User user = userRepository.findByUsername(currentPrincipalName);
-    	//lo aggiungo
     	list.add(user);
     	
     	model.addAttribute("User", list);
-        // cerco gli eventi dove ci sta l'id dell'utente registrato
-        
-       
         userService.controlloScadenzaEventi();
         Set<Events> userEvent = user.getEventi();
         
@@ -72,12 +68,9 @@ public class accountController {
     	
     	Events evento = rep.findById(idEvento);
     	model.addAttribute("evento", evento);
-    	//map.addObject("evento",evento);
+
     	Set<User> partecipanti = evento.getUsers();
     	model.addAttribute("partecipanti",partecipanti);
-    	//map.addObject("partecipanti",partecipanti);
-    	//map.setViewName("adminEvent");
-    	
         return "redirect:/adminEvent";
     }
 	@GetMapping("/account/deleteEvent")

@@ -10,8 +10,8 @@
         <div class="form-group ${error != null ? 'has-error' : ''}">
             <span>${message}</span>
             <input name="username" type="text" class="form-control" placeholder="Username"
-                   autofocus="true"/>
-            <input name="password" type="password" class="form-control" placeholder="Password"/>
+                   autofocus required/>
+            <input name="password" type="password" class="form-control" placeholder="Password" required/>
             <tr>
                 <td>Remember Me:</td>
                 <td><input type="checkbox" name="remember-me" /></td>

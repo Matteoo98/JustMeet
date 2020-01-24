@@ -4,15 +4,15 @@
 package com.Pasta.JustMeet.controllers;
 
 import java.security.Principal;
-import java.util.List;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.jpa.repository.JpaRepository;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.Pasta.JustMeet.model.Events;
+
 import com.Pasta.JustMeet.model.User;
 import com.Pasta.JustMeet.repository.EventsRepository;
 import com.Pasta.JustMeet.repository.UserRepository;
@@ -40,7 +40,7 @@ public class welcomeController {
 		}
 		model.addAttribute("principal", user.getName());
 		User utente = userRepository.findByUsername(user.getName());
-//le mie statistiche
+       //le mie statistiche
 		model.addAttribute("numeroeventi", eventsRepository.findAll().size()) ;
     	model.addAttribute("numeroEventiInCorso", utente.getEventi().size());
     	model.addAttribute("numeroEventiCreati", userService.getOwnerEvents(utente).size()); 

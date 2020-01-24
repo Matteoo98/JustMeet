@@ -11,21 +11,21 @@
             <spring:bind path="username">
                 <div class="form-group ${status.error ? 'has-error' : ''}">
                     <form:input type="text" path="username" class="form-control" placeholder="Username"
-                                autofocus="true"></form:input>
+                                autofocus="true" required="true"></form:input>
                     <form:errors path="username"></form:errors>
                 </div>
             </spring:bind>
 
             <spring:bind path="cognome">
                 <div class="form-group ${status.error ? 'has-error' : ''}">
-                    <form:input type="cognome" path="cognome" class="form-control" placeholder="Cognome"></form:input>
+                    <form:input type="cognome" path="cognome" class="form-control" placeholder="Cognome" autofocus="true" required="true"></form:input>
                     <form:errors path="cognome"></form:errors>
                 </div>
             </spring:bind>
 
             <spring:bind path="password">
                 <div class="form-group ${status.error ? 'has-error' : ''}">
-                    <form:input type="password" path="password" class="form-control" placeholder="Password"></form:input>
+                    <form:input type="password" path="password" class="form-control" placeholder="Password" autofocus="true" required="true"></form:input>
                     <form:errors path="password"></form:errors>
                 </div>
             </spring:bind>
@@ -33,21 +33,21 @@
             <spring:bind path="passwordConfirm">
                 <div class="form-group ${status.error ? 'has-error' : ''}">
                     <form:input type="password" path="passwordConfirm" class="form-control"
-                                placeholder="Confirm your password"></form:input>
+                                placeholder="Confirm your password" autofocus="true" required="true"></form:input>
                     <form:errors path="passwordConfirm"></form:errors>
                 </div>
             </spring:bind>
             
              <spring:bind path="email">
                 <div class="form-group ${status.error ? 'has-error' : ''}">
-                    <form:input type="email" path="email" class="form-control" placeholder="Email"></form:input>
+                    <form:input type="email" path="email" class="form-control" placeholder="Email" autofocus="true" required="true"></form:input>
                     <form:errors path="email"></form:errors>
                 </div>
             </spring:bind>
                         
             <spring:bind path="citta">
                 <div class="form-group ${status.error ? 'has-error' : ''}">
-                    <form:input type="citta" path="citta" class="form-control" placeholder="Citta"></form:input>
+                    <form:input type="citta" path="citta" class="form-control" placeholder="Citta" autofocus="true" required="true"></form:input>
                     <form:errors path="citta"></form:errors>
                 </div>
             </spring:bind>
@@ -57,7 +57,7 @@
             <spring:bind path="preferenceUno">
                <div class="form-group" >
                
-                <form:input class="custom-select" list="sports" type="text" path="preferenceUno" placeholder="your preferences"></form:input>
+                <form:input class="custom-select" list="sports" type="text" path="preferenceUno" placeholder="your preferences" autofocus="true" required="true"></form:input>
                 
                 <datalist id="sports">
                     <option value="CALCIO"></option>
@@ -75,7 +75,7 @@
          
          <spring:bind path="preferenceDue">
                <div class="form-group" >
-    <form:input class="custom-select" list="faculty" type="text" path="preferenceDue" placeholder="your preferences"></form:input>
+    <form:input class="custom-select" list="faculty" type="text" path="preferenceDue" placeholder="your preferences" autofocus="true" required="true"></form:input>
     <datalist id="faculty">
     <option value="INFORMATICA">
     <option value="CHIMICA">
@@ -90,7 +90,7 @@
          
          <spring:bind path="preferenceTre">
                <div class="form-group" >
-    <form:input class="custom-select" list="games" type="text" path="preferenceTre" placeholder="your preferences"></form:input>
+    <form:input class="custom-select" list="games" type="text" path="preferenceTre" placeholder="your preferences" autofocus="true" required="true"></form:input>
     <datalist id="games">
     <option value="FORTNITE">
     <option value="CALL OF DUTY">
