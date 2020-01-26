@@ -20,10 +20,13 @@ var p =	${numeroAmici};
         </div>
       </div>
     </section>
+    
+<div class="container4">
 
 <div id="piechart_3d" style="width: 100%; height: 500px;"></div>
 <div id="piechart_3d2" style="width: 100%; height: 500px;"></div>
 <div id="piechart_3d3" style="width: 100%; height: 500px;"></div>
 
+</div>
   
 <%@ include file = "common/footer.jspf"%>

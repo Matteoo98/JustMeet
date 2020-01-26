@@ -9,6 +9,8 @@
       </div>
     </section>
 
+<div class="container2">  
+
     <article class="single">
       <div class="single_copy">
         <h2 class="single_copy_title">Dettagli Evento</h2>
@@ -50,8 +52,8 @@
 
       </div>
 
-      
-
     </article>
+    
+    </div>
 
 <%@ include file = "common/footer.jspf"%>

@@ -1,40 +1,45 @@
-<%@ include file = "common/headerBootstrap.jspf"%>
+<%@ include file="common/headerBootstrap.jspf"%>
 
 <section class="cover cover--single">
-      <div class="cover_filter"></div>
-      <div class="cover_caption">
-        <div class="cover_caption_copy">
-          <h1>Risultati della ricerca "${searched}" </h1>
-        </div>
-      </div>
-    </section>
+	<div class="cover_filter"></div>
+	<div class="cover_caption">
+		<div class="cover_caption_copy">
+			<h1>Risultati della ricerca "${searched}"</h1>
+		</div>
+	</div>
+</section>
 
-<section class="cards clearfix" >
-    
-    <c:forEach items="${ricerca}" var="event" varStatus="tagStatus">
-    <div class="card">
-        <img class="card_image" src="${contextPath}/resources/images/LogoEventi.jpg" alt="Nature">
-        <div class="card_copy">
-          <h3>${event.name}</h3>
-          <p>Descrizione : ${event.description}</p>
-          <p>Luogo : ${event.luogo}</p>
-          
-          <br>
+<div class="container4">
 
-          <div class="allinea">
-            <a href="${contextPath}/eventi/getEventId?idEvento=${event.id}" class="button_dettagli">Dettagli</a>
-          </div>
-          
-          <div class="allinea">
-            <a href="${contextPath}/eventi/askToJoin?idevento=${event.id}" class="button_partecipa">Partecipa</a>
-          </div>
+<section class="cards clearfix">
 
-        </div>
-      </div>
-    </c:forEach>
-      
-    </section>
+	<c:forEach items="${ricerca}" var="event" varStatus="tagStatus">
+		<div class="card">
+			<img class="card_image"
+				src="${contextPath}/resources/images/LogoEventi.jpg" alt="Nature">
+			<div class="card_copy">
+				<h3>${event.name}</h3>
+				<p>Descrizione : ${event.description}</p>
+				<p>Luogo : ${event.luogo}</p>
 
+				<br>
 
+				<div class="allinea">
+					<a href="${contextPath}/eventi/getEventId?idEvento=${event.id}"
+						class="button_dettagli">Dettagli</a>
+				</div>
 
-<%@ include file = "common/footer.jspf"%>
+				<div class="allinea">
+					<a href="${contextPath}/eventi/askToJoin?idevento=${event.id}"
+						class="button_partecipa">Partecipa</a>
+				</div>
+
+			</div>
+		</div>
+	</c:forEach>
+
+</section>
+
+</div>
+
+<%@ include file="common/footer.jspf"%>

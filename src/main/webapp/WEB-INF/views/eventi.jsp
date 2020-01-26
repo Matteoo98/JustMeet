@@ -12,7 +12,7 @@
     </section>
     
 
-                         
+   <div class="container2">                      
      
   <div id="myBtnContainer" class="button_Sh_My allinea">
   <button type="button" class="btn btn-outline-primary" onclick="filterSelection('tutti')"> Show all</button>
@@ -25,9 +25,12 @@
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i> Cerca</button>
     </form:form>
   </div>
+  
+  </div>
+  
   <br><br>
   
-  <div >
+  <div class="container3">  
     <section class="cards clearfix">
     
     <c:forEach items="${lists}" var="list" varStatus="tagStatus">

@@ -9,6 +9,9 @@
       </div>
     </section>
 <br>
+
+<div class="container2">
+
 <div id="myBtnContainer" class="button_Sh_My allinea_dx">
 <form:form class="form-inline my-2 my-lg-0" name="searchFriend" id="contattaci" action="amici/search" method="POST">
       <input class="form-control mr-sm-2" type="search" name="searchFriend" placeholder="Cerca nuovi amici.." aria-label="Search">
@@ -16,8 +19,12 @@
 </form:form>
 </div>
 
+</div>
+
 <section class="cards clearfix" >
     <h1>Tuoi amici : </h1>
+    
+    <div class="container4">
 
     <c:forEach items="${listaAmici}" var="user" varStatus="tagStatus">
     
@@ -58,10 +65,15 @@
       </div>
     </c:forEach>
       
+      </div>
+      
     </section>
 
 <section class="cards clearfix" >
     <h1>Tutti gli utenti : </h1>
+    
+    <div class="container4">
+    
     <c:forEach items="${tutti}" var="user" varStatus="tagStatus">
     <div class="card">
 
@@ -103,6 +115,8 @@
         </div>
       </div>
     </c:forEach>
+    
+    </div>
       
     </section>
      

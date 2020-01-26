@@ -14,7 +14,7 @@
 	</div>
 </section>
 
-
+<div class="container2">
 
 <c:forEach items="${User}" var="user" varStatus="tagStatus">
 	<article class="single">
@@ -158,6 +158,6 @@
 
 </section>
 
-
+</div>
 
 <%@ include file="common/footer.jspf"%>

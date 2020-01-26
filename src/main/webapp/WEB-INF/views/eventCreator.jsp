@@ -1,6 +1,6 @@
 <%@ include file = "common/headerBootstrap.jspf"%>
 
-    <div class="container">
+    <div class="container container5">
     
     <form:form action="eventCreator" method="POST" modelAttribute="eventForm" class="form-signin" id="contattaci">
     
