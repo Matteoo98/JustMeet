@@ -1,13 +1,7 @@
 <%@ include file="common/headerBootstrapIndex.jspf"%>
 <script>
-	var x = $
-	{
-		numeroutenti
-	}
-	var y = $
-	{
-		numeroeventi
-	}
+	var x = ${numeroutenti}
+	var y = ${numeroeventi}
 </script>
 <script type="text/javascript"
 	src="https://www.gstatic.com/charts/loader.js"></script>

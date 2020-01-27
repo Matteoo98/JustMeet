@@ -33,7 +33,7 @@
 	<link rel="stylesheet" href="${contextPath}/resources/css/styleMobile.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rancho&effect=outline">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rancho&effect=outline|3d-float">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
@@ -44,9 +44,10 @@
 </form>
 
 <header>
-	 
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  		<a class="navbar-brand outline" href="${contextPath}/index">JUST MEET</a>
+
+	
+	<nav  class="navbar navbar-expand-lg navbar-dark bg-dark">
+  		<a  class="navbar-brand font-effect-outline font-effect-3d-float	" href="${contextPath}/index">JUST MEET</a>
 	</nav>
 
 	
