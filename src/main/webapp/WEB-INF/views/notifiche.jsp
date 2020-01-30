@@ -12,8 +12,9 @@
 <div class="container2">
 
 <article class="single">
-	<div class="single_copy">
-		<h2 class="single_copy_title">RICHIESTE PARTECIPAZIONE EVENTO</h2>
+	<div class="single_copy shadow p-3 mb-5 bg-white rounded">
+		
+		<div class="p-3 mb-2 bg-light text-dark shadow-sm p-3 mb-5 bg-white rounded single_copy_title"><h2 align="center">RICHIESTE PARTECIPAZIONE EVENTO</h2></div>
 		<c:forEach items="${notificherichieste}" var="notifica"
 			varStatus="tagStatus">
 			<p class="single_copy_meta">Il
@@ -29,10 +30,10 @@
 		</c:forEach>
 
 		<br>
-		<hr width=70%; align="center";>
+
 		<br>
 
-		<h2 class="single_copy_title">RICHIESTE AMICIZIA</h2>
+		<div class="p-3 mb-2 bg-light text-dark shadow-sm p-3 mb-5 bg-white rounded single_copy_title"><h2 align="center">RICHIESTE AMICIZIA</h2></div>
 		<c:forEach items="${notificheamicizia}" var="notifica"
 			varStatus="tagStatus">
 			<p class="single_copy_meta">Il
@@ -49,9 +50,12 @@
 
 </div>
 
+<br>
+
+<div class="p-3 mb-2 bg-light text-dark shadow p-3 mb-5 bg-white rounded"><h1 align="center">NOTIFICHE COMUNI</h1></div>
 <c:forEach items="${notifichecomuni}" var="notifica"
 	varStatus="tagStatus">
-	<section class="banner_notify clearfix">
+	<section class="banner_notify shadow p-3 mb-5 bg-white rounded clearfix">
 	
 	<div class="container5">  
 	

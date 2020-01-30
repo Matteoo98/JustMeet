@@ -45,11 +45,11 @@
 
 			<section class="cards clearfix">
 			
-			<h1>LISTA EVENTI DISPONIBILI</h1>
+			<div class="p-3 mb-2 bg-light text-dark shadow p-3 mb-5 bg-white rounded"><h1 align="center">LISTA EVENTI DISPONIBILI</h1></div>
 
 				<c:forEach items="${lists}" var="list" varStatus="tagStatus">
 					<div class="filterDiv tutti">
-						<div class="card">
+						<div class="card shadow p-3 mb-5 bg-white rounded">
 							<img class="card_image"
 								src="${contextPath}/resources/images/LogoEventi.jpg"
 								alt="Nature">
@@ -57,7 +57,7 @@
 								<h3>${list.name}</h3>
 								<p>${list.description}</p>
 								<p>${list.luogo}</p>
-
+								
 								<div class="allinea allinea_par_dett">
 									<a href="${contextPath}/eventi/askToJoin?idevento=${list.id}"
 										class="button_partecipa" onclick="myFunctionPartecipa()">Partecipa</a>
@@ -66,6 +66,7 @@
 									<a href="${contextPath}/eventi/getEventId?idEvento=${list.id}"
 										class="button_dettagli">Dettagli</a>
 								</div>
+								
 							</div>
 						</div>
 					</div>
@@ -79,10 +80,12 @@
 		<div class="carousel-item">
 
 			<section class="cards clearfix">
-				<h1>EVENTI SUGGERITI IN BASE ALLE PREFERENZE</h1>
+				
+				<div class="p-3 mb-2 bg-light text-dark shadow p-3 mb-5 bg-white rounded"><h1 align="center">EVENTI SUGGERITI IN BASE ALLE PREFERENZE</h1></div>
+				
 				<c:forEach items="${mymatchlist}" var="list" varStatus="tagStatus">
 					<div class="filterDiv mymatch">
-						<div class="card ">
+						<div class="card shadow p-3 mb-5 bg-white rounded">
 							<img class="card_image"
 								src="${contextPath}/resources/images/LogoEventi.jpg"
 								alt="Nature">

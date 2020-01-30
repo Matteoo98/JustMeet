@@ -14,9 +14,11 @@
 <div class="container4">
 
 	<section class="cards clearfix">
+	
+		<div class="p-3 mb-2 bg-light text-dark shadow p-3 mb-5 bg-white rounded"><h1 align="center">EVENTI GRUPPI STUDIO</h1></div>
 
 		<c:forEach items="${Events}" var="event" varStatus="tagStatus">
-			<div class="card">
+			<div class="card shadow p-3 mb-5 bg-white rounded">
 				<img class="card_image"
 					src="${contextPath}/resources/images/LogoStudio.jpg" alt="Nature">
 				<div class="card_copy">

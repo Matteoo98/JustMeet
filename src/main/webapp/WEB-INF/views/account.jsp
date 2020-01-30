@@ -18,7 +18,7 @@
 
 	<c:forEach items="${User}" var="user" varStatus="tagStatus">
 		<article class="single">
-			<div class="single_copy">
+			<div class="single_copy shadow p-3 mb-5 bg-white rounded">
 				<h2 class="single_copy_title">INFORMAZIONI UTENTE</h2>
 				<br>
 
@@ -84,76 +84,6 @@
 </article>
 </c:forEach>
 
-
-<!--  
-<section class="cards clearfix">
-	<h1>EVENTI A CUI TI SEI UNITO</h1>
-	<c:forEach items="${Events}" var="event" varStatus="tagStatus">
-		<div class="card">
-			<img class="card_image"
-				src="${contextPath}/resources/images/LogoEventi.jpg" alt="Nature">
-			<div class="card_copy">
-				<h3>${event.name}</h3>
-				<p>Descrizione : ${event.description}</p>
-				<p>Luogo : ${event.luogo}</p>
-
-				<p></p>
-
-				<div class="allinea allinea_dett_dis">
-					<a href="${contextPath}/eventi/getEventId?idEvento=${event.id}"
-						class="button_dettagli">Dettagli</a>
-				</div>
-
-				<div class="allinea allinea_dett_dis">
-					<a
-						href="${contextPath}/account/getEventNamePerDisdire?id=${event.id}"
-						class="button_disdici">Disdici</a>
-				</div>
-
-			</div>
-		</div>
-	</c:forEach>
-
-</section>
-
-<section class="cards clearfix">
-	<h1>EVENTI CHE HAI CREATO</h1>
-	<c:forEach items="${owner}" var="event" varStatus="tagStatus">
-		<div class="card">
-			<img class="card_image"
-				src="${contextPath}/resources/images/myevents.jpg" alt="Nature">
-			<div class="card_copy">
-				<h3>${event.name}</h3>
-				<p>Descrizione : ${event.description}</p>
-				<p>Luogo : ${event.luogo}</p>
-
-				<p></p>
-
-				<div class="allinea allinea3">
-					<a href="${contextPath}/adminEvent?idEvento=${event.id}"
-						class="button_partecipa">Modifica</a>
-				</div>
-
-				<div class="allinea allinea3">
-					<a href="${contextPath}/managePartecipanti?idEvento=${event.id}"
-						class="button_dettagli">Gestione</a>
-				</div>
-
-				<br> <br>
-
-
-
-				<div>
-					<a href="${contextPath}/account/deleteEvent?idEvento=${event.id}"
-						class="btn2 button_elimina btn-lg btn-block">Elimina</a>
-				</div>
-			</div>
-		</div>
-	</c:forEach>
-
-</section>
--->
-
 <div id="carouselExampleIndicators" class="carousel slide"
 	data-ride="carousel">
 	<ol class="carousel-indicators">
@@ -165,9 +95,10 @@
 		<div class="carousel-item active">
 
 			<section class="cards clearfix">
-				<h1>EVENTI A CUI TI SEI UNITO</h1>
+				
+				<div class="p-3 mb-2 bg-light text-dark shadow p-3 mb-5 bg-white rounded"><h1 align="center">EVENTI A CUI TI SEI UNITO</h1></div>
 				<c:forEach items="${Events}" var="event" varStatus="tagStatus">
-					<div class="card">
+					<div class="card shadow p-3 mb-5 bg-white rounded">
 						<img class="card_image"
 							src="${contextPath}/resources/images/LogoEventi.jpg" alt="Nature">
 						<div class="card_copy">
@@ -198,9 +129,11 @@
 		<div class="carousel-item">
 
 			<section class="cards clearfix">
-				<h1>EVENTI CHE HAI CREATO</h1>
+
+				<div class="p-3 mb-2 bg-light text-dark shadow p-3 mb-5 bg-white rounded"><h1 align="center">EVENTI CHE HAI CREATO</h1></div>
+				
 				<c:forEach items="${owner}" var="event" varStatus="tagStatus">
-					<div class="card">
+					<div class="card shadow p-3 mb-5 bg-white rounded">
 						<img class="card_image"
 							src="${contextPath}/resources/images/myevents.jpg" alt="Nature">
 						<div class="card_copy">

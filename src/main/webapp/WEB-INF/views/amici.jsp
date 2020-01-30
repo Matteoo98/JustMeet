@@ -36,13 +36,14 @@
 		<div class="carousel-item active">
 
 			<section class="cards clearfix">
-				<h1>Tuoi amici</h1>
+				
+				<div class="p-3 mb-2 bg-light text-dark shadow p-3 mb-5 bg-white rounded"><h1 align="center">TUOI AMICI</h1></div>
 
 				<div class="container4">
 
 					<c:forEach items="${listaAmici}" var="user" varStatus="tagStatus">
 
-						<div class="card">
+						<div class="card shadow p-3 mb-5 bg-white rounded">
 
 							<c:choose>
 								<c:when test="${user.username=='Noyz Narcos'}">
@@ -95,12 +96,13 @@
 		</div>
 		<div class="carousel-item">
 			<section class="cards clearfix">
-				<h1>Tutti gli utenti</h1>
+				
+				<div class="p-3 mb-2 bg-light text-dark shadow p-3 mb-5 bg-white rounded"><h1 align="center">TUTTI GLI UTENTI</h1></div>
 
 				<div class="container4">
 
 					<c:forEach items="${tutti}" var="user" varStatus="tagStatus">
-						<div class="card">
+						<div class="card shadow p-3 mb-5 bg-white rounded">
 
 							<c:choose>
 								<c:when test="${user.username=='Kaka22'}">

@@ -181,7 +181,7 @@ body {
 	text-decoration: none;
 	float: left;
 }
-button_elimina_account {
+.button_elimina_account {
 	display: none;
 }
 .button:hover {
@@ -430,15 +430,17 @@ a:hover {
 }
 
 .card {
-	width: 30%;
+	/* width: 30%; */
+	width: 362px;
+	height: 550px;
 	margin: 0 1.5%;
 	background: #fff;
 	float: left;
 }
 
 .card_image {
-	width: 100%;
-	height: auto;
+	/* width: 100%; height: auto; */
+	width: auto; height: 60%;
 }
 
 .card_copy {
@@ -517,7 +519,7 @@ a:hover {
 	background: #343a40;
 	padding: 30px;
 	color: #fff;
-	margin-top: 85px;
+	 margin-top: 85px; 
 }
 .footer_index {
 	background: #343a40;
@@ -528,7 +530,7 @@ a:hover {
 
 .footer_login {
 	background: #343a40;
-	padding: 30px;
+	padding: 30px; 
 	color: #fff;
 	margin-top: 26.8%;
 }
