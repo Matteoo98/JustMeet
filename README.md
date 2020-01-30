@@ -1,70 +1,76 @@
 # JustMeet
 
-JustMeet is a website created in order to help people to organize events of every kind (ex: Sport , Study , Games).
+JustMeet è un sistema creato per facilitare la creazione di eventi ( es. Sportivi , videoludici , didattici ...) tra persone.
+Le funzionalità sono :
+- Poter registrarsi 
+- Visualizzare il proprio account
+- Modificare o eliminare il proprio account
+- Visualizzare gli eventi a cui ti sei unito
+- Gestire gli eventi che hai creato
+- Creare o partecipare ad eventi
+- Visualizzare gli eventi disponibili
+- Stringire amicizia con altri utenti
+- Visualizzare o rimuovere i propri amici
+- Sistema di notifiche integrato
 
 ![Alt text](src/main/webapp/resources/images/Screen.png?raw=true "Titolo")
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Le istruzioni seguenti ti permetteranno di eseguire il sistema sulla tua macchina e simulare l'uso su un web server.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
+Di seguito troverai tutto quello che ti occorre per preparare il tuo ambiente per eseguire JustMeet :
+- JDK 1.8 (versione minima)
+- Maven
+- Il tuo IDE preferito ( si consiglia Eclipse )
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+Ora ti illustreremo una serie di passi per eseguire il sistema , ma prima se vuoi configurare le coordinate del tuo Database MySQL
+vai in src/main/resources nella cartella del progetto e cerca il file " application.properties " .
 
-Say what the step will be
-
+Usa maven per compilare il sistema
 ```
-Give the example
+mvn install
 ```
-
-And repeat
-
+Questo eseguirà JustMeet sulla porta 8080 del tuo computer
 ```
-until finished
+Run with your IDE
 ```
+Ora vedrai che verrà avviato Spring Boot , creata una connessione con un Database online.
 
-End with an example of getting some data out of the system or using it for a little demo
+Alla fine dovrai aprire il browser che preferisci e cercare " localhost:8080 " e se tutto
+
+sarà andato a buon fine potrai vedere correttamente la pagina index.
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+Per eseguire dei semplici test
 
 ```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
+mvn test
 ```
 
 ## Deployment
+Se vuoi simulare il sistema su un web server gratuitamente , scarica e configura ngrok.
 
-* Please download ngrok to simulate a live server
-* Use command : ./ngrok http 8080 
-* Tutorial : https://www.antonioscatoloni.it/blog/2016/05/04/introduzione-a-ngrok
+Per maggiori informazioni : https://www.antonioscatoloni.it/blog/2016/05/04/introduzione-a-ngrok
+
+Una volta configurato :
+
+* Eseguire JustMeet sulla tua macchina
+* Eseguire sulla tua macchina il comando : ./ngrok http 8080 
+
+Se tutto sarà andato a buon fine ngrok ti indicherà i link per visitare il sito. 
 
 ## Built With
 
 * Spring Boot
 * JSP Page
 * Bootstrap
+* MySQL online
 
 ## Javascript Libraries
 
@@ -90,26 +96,8 @@ Give an example
 * Google Chart Diagrams
 * Please refer to this link if you want to change the diagrams : https://developers.google.com/chart/interactive/docs/gallery?hl=it
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
 ## Authors
 
 * **Matteo Molteni** 
 * **Mattia Romagnoli**
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-
 
