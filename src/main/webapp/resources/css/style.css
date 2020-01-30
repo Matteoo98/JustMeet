@@ -69,6 +69,17 @@ body {
 /* ********************** 
           GENERAL 
 ********************** */
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    height: 50px;
+    width: 50px;
+    outline: black;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-size: 50%, 50%;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
 .hidden-div {
     display:none;
     visibility: hidden;
