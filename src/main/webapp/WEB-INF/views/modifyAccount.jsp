@@ -13,7 +13,7 @@
 		modelAttribute="modifyAccount" class="form-signin">
 
 		<br>
-		<h2 class="form-signin-heading">Modifica il tuo account</h2>
+		<div class="p-3 mb-2 bg-light text-dark shadow p-3 mb-5 bg-white rounded"><h2 align="center">MODIFICA IL TUO ACCOUNT</h2></div>
 		
 		<div class="container5">
 
@@ -54,8 +54,8 @@
 		</spring:bind>
 		
 		</div>
-
-		<h1>Scegli i tuoi interessi</h1>
+		<br>
+		<div class="p-3 mb-2 bg-light text-dark shadow p-3 mb-5 bg-white rounded"><h2 align="center">MODIFICA GLI INTERESSI</h2></div>
 		
 		<div class="container5">  
 
@@ -112,7 +112,7 @@
 		
 		</div>
 
-		<button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+		<button class="btn btn-lg btn-primary btn-block" type="submit">Modifica</button>
 	</form:form>
 
 </div>

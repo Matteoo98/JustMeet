@@ -14,7 +14,7 @@
 <section class="cards clearfix">
 
 	<c:forEach items="${ricerca}" var="event" varStatus="tagStatus">
-		<div class="card">
+		<div class="card shadow p-3 mb-5 bg-white rounded">
 			<img class="card_image"
 				src="${contextPath}/resources/images/LogoEventi.jpg" alt="Nature">
 			<div class="card_copy">

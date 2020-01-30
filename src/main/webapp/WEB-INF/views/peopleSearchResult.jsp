@@ -13,7 +13,7 @@
 
 <section class="cards clearfix">
 	<c:forEach items="${ricercati}" var="user" varStatus="tagStatus">
-		<div class="card">
+		<div class="card shadow p-3 mb-5 bg-white rounded">
 			<c:choose>
 				<c:when test="${user.username=='Noyz Narcos'}">
 					<img class="card_image"
@@ -42,7 +42,7 @@
 				<p>Email : ${user.email}</p>
 				<p>Città : ${user.citta}</p>
 
-				<p></p>
+				<br>
 
 				<div class="allinea">
 					<a

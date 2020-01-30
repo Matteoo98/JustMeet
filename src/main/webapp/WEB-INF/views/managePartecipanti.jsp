@@ -10,12 +10,13 @@
 </section>
 
 <section class="cards clearfix">
-	<h1>Partecipanti :</h1>
+
+	<div class="p-3 mb-2 bg-light text-dark shadow p-3 mb-5 bg-white rounded"><h1 align="center">PARTECIPANTI</h1></div>
 	
 	<div class="container4">  
 	
 	<c:forEach items="${lista}" var="user" varStatus="tagStatus">
-		<div class="card">
+		<div class="card shadow p-3 mb-5 bg-white rounded">
 			<img class="card_image"
 				src="${contextPath}/resources/images/persona.jpg" alt="Nature">
 			<div class="card_copy">
@@ -62,12 +63,12 @@
 </div>
 
 <c:forEach items="${ricercati}" var="user" varStatus="tagStatus">
-	<section class="banner_notify clearfix">
+	<section class="banner_notify shadow p-3 mb-5 bg-white rounded clearfix">
 	
 		<div class="container5">  
 	
-		<div class="banner_copy">
-			<div class="banner_copy_text">
+		<div class="banner_copy ">
+			<div class="banner_copy_text ">
 
 				<p class="single_copy_meta2">
 					<strong>Nome :</strong> &emsp;<a

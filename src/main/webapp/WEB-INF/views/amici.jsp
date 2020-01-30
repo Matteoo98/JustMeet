@@ -22,8 +22,9 @@
 			</button>
 		</form:form>
 	</div>
-
 </div>
+
+<br><br><br>
 
 <div id="carouselExampleIndicators" class="carousel slide"
 	data-ride="carousel">
@@ -73,6 +74,8 @@
 								<h3>${user.username}</h3>
 								<p>${user.email}</p>
 								<p>${user.citta}</p>
+								
+								<br>
 
 								<div class="allinea">
 									<a

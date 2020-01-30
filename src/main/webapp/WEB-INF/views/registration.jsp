@@ -5,9 +5,9 @@
         <form:form method="POST" modelAttribute="userForm" class="form-signin" id="contattaci">
         
         <br><br><br>
-        
-            <h2 class="form-signin-heading">Create your account</h2>
-            <br>
+
+            <div class="p-3 mb-2 bg-light text-dark shadow p-3 mb-5 bg-white rounded"><h2 align="center" class="form-signin-heading">CREA UN NUOVO ACCOUNT</h2></div>
+            
             <spring:bind path="username">
                 <div class="form-group ${status.error ? 'has-error' : ''}">
                     <form:input type="text" path="username" class="form-control" placeholder="Username"
@@ -52,7 +52,8 @@
                 </div>
             </spring:bind>
             
-            <h1>Scegli i tuoi interessi</h1>
+            <br>
+            <div class="p-3 mb-2 bg-light text-dark shadow p-3 mb-5 bg-white rounded"><h2 align="center" class="form-signin-heading">SCEGLI LE TUE PREFERENZE</h2></div>
             
             <spring:bind path="preferenceUno">
                <div class="form-group" >
@@ -103,7 +104,7 @@
 </div>
          </spring:bind>
 
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Crea</button>
         </form:form>
 
     </div>

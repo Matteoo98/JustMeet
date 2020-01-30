@@ -8,7 +8,7 @@
     		<br>
     		<br>
     
-            <h2 class="form-signin-heading">Crea un evento</h2>
+            <div class="p-3 mb-2 bg-light text-dark shadow p-3 mb-5 bg-white rounded"><h2 align="center">CREA UN EVENTO</h2></div>
             <br>
             
             <spring:bind path="name">
@@ -89,7 +89,7 @@
                 </div>
             </spring:bind>
             
-             <button class="btn btn-lg btn-primary btn-block" type="submit">Create</button>
+             <button class="btn btn-lg btn-primary btn-block" type="submit">Crea</button>
 
         
 </form:form>

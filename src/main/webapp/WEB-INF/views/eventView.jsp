@@ -12,8 +12,9 @@
 <div class="container2">  
 
     <article class="single">
-      <div class="single_copy">
-        <h2 class="single_copy_title">Dettagli Evento</h2>
+      <div class="single_copy shadow p-3 mb-5 bg-white rounded">
+      
+        <div class="p-3 mb-2 bg-light text-dark shadow-sm p-3 mb-5 bg-white rounded single_copy_title"><h2 align="center">DETTAGLI EVENTO</h2></div>
         <br>
 
         <p class="single_copy_meta2"> <strong>Nome Evento : </strong>&emsp;${evento.name}</p>

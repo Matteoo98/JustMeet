@@ -25,7 +25,6 @@
 					<p>Descrizione : ${event.description}</p>
 					<p>Luogo : ${event.luogo}</p>
 					<br> 
-					<br>
 
 					<div class="allinea">
 						<a href="${contextPath}/eventi/askToJoin?idevento=${event.id}"

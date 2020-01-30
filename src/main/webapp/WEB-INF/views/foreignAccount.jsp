@@ -13,32 +13,46 @@
 <div class="container2">  
 
 <article class="single">
-	<div class="single_copy">
-		<h2 class="single_copy_title">INFORMAZIONI UTENTE</h2>
-		<p></p>
-		<p class="single_copy_meta">Nome :</p>
-		<p>${user.username}</p>
-		<p class="single_copy_meta">Cognome :</p>
-		<p>${user.cognome}</p>
-		<p class="single_copy_meta">Città :</p>
-		<p>${user.citta}</p>
-		<p class="single_copy_meta">Email :</p>
-		<p>${user.email}</p>
-		<p class="single_copy_meta">Preferenza 1 :</p>
-		<p>${user.preferenceUno}</p>
-		<p class="single_copy_meta">Preferenza 2 :</p>
-		<p>${user.preferenceDue}</p>
-		<p class="single_copy_meta">Preferenza 3 :</p>
-		<p>${user.preferenceTre}</p>
+	<div class="single_copy shadow p-3 mb-5 bg-white rounded">
+		<div class="p-3 mb-2 bg-light text-dark shadow-sm p-3 mb-5 bg-white rounded single_copy_title"><h2 align="center">INFORMAZIONI UTENTE</h2></div>
+		<br> 
+		<p class="single_copy_meta2">
+					<strong>Nome : </strong>&emsp;${user.username}
+				</p>
+
+				<p class="single_copy_meta2">
+					<strong>Cognome : </strong>&emsp;${user.cognome}
+				</p>
+
+				<p class="single_copy_meta2">
+					<strong>Citta : </strong>&emsp;${user.citta}
+				</p>
+
+				<p class="single_copy_meta2">
+					<strong>Email : </strong>&emsp;${user.email}
+				</p>
+
+				<p class="single_copy_meta2">
+					<strong>Preferenza 1 : </strong>&emsp;${user.preferenceUno}
+				</p>
+
+				<p class="single_copy_meta2">
+					<strong>Preferenza 2 : </strong>&emsp;${user.preferenceDue}
+				</p>
+
+				<p class="single_copy_meta2">
+					<strong>Preferenza 3 : </strong>&emsp;${user.preferenceTre}
+				</p>
 	</div>
 </article>
 
 
 
 <section class="cards clearfix">
-	<h1>EVENTI A CUI SI E' UNITO</h1>
+
+	<div class="p-3 mb-2 bg-light text-dark shadow p-3 mb-5 bg-white rounded"><h1 align="center">EVENTI A CUI SI E' UNITO</h1></div>
 	<c:forEach items="${Events}" var="event" varStatus="tagStatus">
-		<div class="card">
+		<div class="card shadow p-3 mb-5 bg-white rounded">
 			<img class="card_image"
 				src="${contextPath}/resources/images/myevents.jpg" alt="Nature">
 			<div class="card_copy">

@@ -19,7 +19,8 @@
 	<c:forEach items="${User}" var="user" varStatus="tagStatus">
 		<article class="single">
 			<div class="single_copy shadow p-3 mb-5 bg-white rounded">
-				<h2 class="single_copy_title">INFORMAZIONI UTENTE</h2>
+				
+				<div class="p-3 mb-2 bg-light text-dark shadow-sm p-3 mb-5 bg-white rounded single_copy_title"><h2 align="center">INFORMAZIONI UTENTE</h2></div>
 				<br>
 
 				<p class="single_copy_meta2">
@@ -170,7 +171,8 @@
 
 		</div>
 	</div>
-	<br> <br> <br> <a class="carousel-control-prev"
+	<br> <br> <br> 
+	<a class="carousel-control-prev"
 		href="#carouselExampleIndicators" role="button" data-slide="prev">
 		<span class="carousel-control-prev-icon" aria-hidden="true"></span> <span
 		class="sr-only">Previous</span>

@@ -21,11 +21,26 @@ var p =	${numeroAmici};
       </div>
     </section>
     
-<div class="container4">
+<div class="container2">
 
-<div id="piechart_3d" style="width: 100%; height: 500px;"></div>
+<br>
+
+<article class="single">
+	<div class="single_copy shadow p-3 mb-5 bg-white rounded">
+
+	<div class="p-3 mb-2 bg-light text-dark shadow-sm p-3 mb-5 bg-white rounded single_copy_title"><h2 align="center">STATISTICHE</h2></div>
+		
+		<div id="piechart_3d" style="width: 100%; height: 500px;"></div>
 <div id="piechart_3d2" style="width: 100%; height: 500px;"></div>
 <div id="piechart_3d3" style="width: 100%; height: 500px;"></div>
+		
+		
+	</div>
+</article>
+
+
+
+
 
 </div>
   

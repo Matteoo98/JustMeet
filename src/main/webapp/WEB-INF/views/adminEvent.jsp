@@ -12,7 +12,8 @@
  <form:form action="adminEvent" method="POST" modelAttribute="adminEvent" class="form-signin">
     
             <br>
-            <h2 class="form-signin-heading">Modifica il tuo evento</h2>
+            
+            <div class="p-3 mb-2 bg-light text-dark shadow-sm p-3 mb-5 bg-white rounded single_copy_title"><h2 align="center">MODIFICA IL TUO EVENTO</h2></div>
             
             <spring:bind path="name">
                 <div class="form-group ${status.error ? 'has-error' : ''}">

@@ -27,9 +27,7 @@
 					<h3>${event.name}</h3>
 					<p>Descrizione : ${event.description}</p>
 					<p>Luogo : ${event.luogo}</p>
-					<br>
-					<br>
-
+					
 					<div class="allinea">
 						<a href="${contextPath}/eventi/askToJoin?idevento=${event.id}"
 							class="button_partecipa">Partecipa</a>

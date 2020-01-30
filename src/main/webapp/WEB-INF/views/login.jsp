@@ -4,8 +4,7 @@
       <form method="POST" action="${contextPath}/login" class="form-signin">
       	<br><br>
       	<br>
-        <h2 class="form-heading">Log in</h2>
-        <br>
+        <div class="p-3 mb-2 bg-light text-dark shadow p-3 mb-5 bg-white rounded"><h2 align="center" class="form-heading">LOG IN</h2></div>
 
         <div class="form-group ${error != null ? 'has-error' : ''}">
             <span>${message}</span>
