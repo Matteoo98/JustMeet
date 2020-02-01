@@ -8,11 +8,17 @@
 
         <div class="form-group ${error != null ? 'has-error' : ''}">
             <span>${message}</span>
+             <div class="font-effect-shadow-multiple  "><font size="6">Username : </font></div>
+             <br>  
             <input name="username" type="text" class="form-control" placeholder="Username"
                    autofocus required/>
+            <br>      
+            <div class="font-effect-shadow-multiple "><font size="6">Password : </font></div> 
+            <br>      
             <input name="password" type="password" class="form-control" placeholder="Password" required/>
+            <br>
             <tr>
-                <td>Remember Me:</td>
+                <td ><font size="6">Remember Me : </font></td>
                 <td><input type="checkbox" name="remember-me" /></td>
             </tr>
             <span>${error}</span>
