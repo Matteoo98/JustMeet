@@ -24,7 +24,9 @@
 	</div>
 </div>
 
-<br><br><br>
+<br>
+<br>
+<br>
 
 <div id="carouselExampleIndicators" class="carousel slide"
 	data-ride="carousel">
@@ -37,61 +39,68 @@
 		<div class="carousel-item active">
 
 			<section class="cards clearfix">
-				
-				<div class="p-3 mb-2 bg-light text-dark shadow p-3 mb-5 bg-white rounded"><h1 align="center">TUOI AMICI</h1></div>
+
+				<div
+					class="p-3 mb-2 bg-light text-dark shadow p-3 mb-5 bg-white rounded">
+					<h1 align="center">TUOI AMICI</h1>
+				</div>
 
 				<div class="container4">
 
-					<c:forEach items="${listaAmici}" var="user" varStatus="tagStatus">
+					<div class="container_flex">
+						<c:forEach items="${listaAmici}" var="user" varStatus="tagStatus">
 
-						<div class="card shadow p-3 mb-5 bg-white rounded">
+							<div class="item card shadow p-3 mb-5 bg-white rounded">
 
-							<c:choose>
-								<c:when test="${user.username=='Noyz Narcos'}">
-									<img class="card_image"
-										src="http://3.citynews-latinatoday.stgy.ovh/~media/original-hi/45112367075825/noyz-12-2.jpg"
-										alt="Nature">
-								</c:when>
+								<c:choose>
+									<c:when test="${user.username=='Totti'}">
+										<img class="card_image"
+											src="https://www.esportsmag.it/wp-content/uploads/2019/03/totti-2-e1552666827943.jpg"
+											alt="Nature">
+									</c:when>
 
-								<c:when test="${user.username=='Pato07'}">
-									<img class="card_image"
-										src="https://i.pinimg.com/originals/d4/51/00/d4510008149492dd4d554d20d426bea9.jpg">
-								</c:when>
+									<c:when test="${user.username=='Pato07'}">
+										<img class="card_image"
+											src="https://i.pinimg.com/originals/d4/51/00/d4510008149492dd4d554d20d426bea9.jpg">
+									</c:when>
 
-								<c:when test="${user.username=='Kaka22'}">
-									<img class="card_image"
-										src="https://www.pianetamilan.it/wp-content/uploads/sites/23/2016/03/Kak%C3%A0_Milan_Chievo_2013_Getty_Images.jpg"
-										alt="Nature">
-								</c:when>
+									<c:when test="${user.username=='Kaka22'}">
+										<img class="card_image"
+											src="https://www.pianetamilan.it/wp-content/uploads/sites/23/2016/03/Kak%C3%A0_Milan_Chievo_2013_Getty_Images.jpg"
+											alt="Nature">
+									</c:when>
 
-								<c:otherwise>
-									<img class="card_image"
-										src="${contextPath}/resources/images/persona.jpg" alt="Nature">
-								</c:otherwise>
-							</c:choose>
+									<c:otherwise>
+										<img class="card_image"
+											src="${contextPath}/resources/images/persona.jpg"
+											alt="Nature">
+									</c:otherwise>
+								</c:choose>
 
-							<div class="card_copy">
-								<h3>${user.username}</h3>
-								<p>${user.email}</p>
-								<p>${user.citta}</p>
-								
-								<br>
+								<div class="card_copy">
+									<h3>${user.username}</h3>
+									<p>${user.email}</p>
+									<p>${user.citta}</p>
 
-								<div class="allinea">
-									<a
-										href="${contextPath}/eventView/account?nomeUser=${user.username}"
-										class="button_dettagli">Dettagli</a>
+									<br>
+
+									<div class="allinea_container">
+										<div class="allinea_item">
+											<a
+												href="${contextPath}/eventView/account?nomeUser=${user.username}"
+												class="button_dettagli">Dettagli</a>
+										</div>
+
+										<div class="allinea_item">
+											<a
+												href="${contextPath}/amici/remove?username=${user.username}"
+												class="button_disdici">Rimuovi</a>
+										</div>
+									</div>
 								</div>
-
-								<div class="allinea">
-									<a href="${contextPath}/amici/remove?username=${user.username}"
-										class="button_disdici">Rimuovi</a>
-								</div>
-
 							</div>
-						</div>
-					</c:forEach>
-
+						</c:forEach>
+					</div>
 				</div>
 
 			</section>
@@ -99,73 +108,75 @@
 		</div>
 		<div class="carousel-item">
 			<section class="cards clearfix">
-				
-				<div class="p-3 mb-2 bg-light text-dark shadow p-3 mb-5 bg-white rounded"><h1 align="center">TUTTI GLI UTENTI</h1></div>
+
+				<div
+					class="p-3 mb-2 bg-light text-dark shadow p-3 mb-5 bg-white rounded">
+					<h1 align="center">TUTTI GLI UTENTI</h1>
+				</div>
 
 				<div class="container4">
 
-					<c:forEach items="${tutti}" var="user" varStatus="tagStatus">
-						<div class="card shadow p-3 mb-5 bg-white rounded">
+					<div class="container_flex">
+						<c:forEach items="${tutti}" var="user" varStatus="tagStatus">
+							<div class="item card shadow p-3 mb-5 bg-white rounded">
 
-							<c:choose>
-								<c:when test="${user.username=='Kaka22'}">
-									<img class="card_image"
-										src="https://www.pianetamilan.it/wp-content/uploads/sites/23/2016/03/Kak%C3%A0_Milan_Chievo_2013_Getty_Images.jpg"
-										alt="Nature">
-								</c:when>
+								<c:choose>
+									<c:when test="${user.username=='Kaka22'}">
+										<img class="card_image"
+											src="https://www.pianetamilan.it/wp-content/uploads/sites/23/2016/03/Kak%C3%A0_Milan_Chievo_2013_Getty_Images.jpg"
+											alt="Nature">
+									</c:when>
 
-								<c:when test="${user.username=='Pato07'}">
-									<img class="card_image"
-										src="https://i.pinimg.com/originals/d4/51/00/d4510008149492dd4d554d20d426bea9.jpg">
-								</c:when>
+									<c:when test="${user.username=='Pato07'}">
+										<img class="card_image"
+											src="https://i.pinimg.com/originals/d4/51/00/d4510008149492dd4d554d20d426bea9.jpg">
+									</c:when>
 
-								<c:when test="${user.username=='Noyz Narcos'}">
-									<img class="card_image"
-										src="http://3.citynews-latinatoday.stgy.ovh/~media/original-hi/45112367075825/noyz-12-2.jpg"
-										alt="Nature">
-								</c:when>
+									<c:when test="${user.username=='Totti'}">
+										<img class="card_image"
+											src="https://www.esportsmag.it/wp-content/uploads/2019/03/totti-2-e1552666827943.jpg"
+											alt="Nature">
+									</c:when>
 
-								<c:otherwise>
-									<img class="card_image"
-										src="${contextPath}/resources/images/persona.jpg" alt="Nature">
-								</c:otherwise>
-							</c:choose>
+									<c:otherwise>
+										<img class="card_image"
+											src="${contextPath}/resources/images/persona.jpg"
+											alt="Nature">
+									</c:otherwise>
+								</c:choose>
 
-							<div class="card_copy">
-								<h3>${user.username}</h3>
-								<p>${user.email}</p>
-								<p>${user.citta}</p>
+								<div class="card_copy">
+									<h3>${user.username}</h3>
+									<p>${user.email}</p>
+									<p>${user.citta}</p>
 
-								<br>
+									<br>
 
 
+									<div class="allinea_container">
+										<div class="allinea_item">
+											<a
+												href="${contextPath}/eventView/account?nomeUser=${user.username}"
+												class="button_dettagli">Dettagli</a>
+										</div>
 
-								<div class="allinea">
-									<a
-										href="${contextPath}/eventView/account?nomeUser=${user.username}"
-										class="button_dettagli">Dettagli</a>
+										<div class="allinea_item">
+											<a href="${contextPath}/amici/add?username=${user.username}"
+												class="button_partecipa" onclick="myFunctionAmicizia()">Aggiungi</a>
+										</div>
+									</div>
 								</div>
-
-								<div class="allinea">
-									<a href="${contextPath}/amici/add?username=${user.username}"
-										class="button_partecipa" onclick="myFunctionAmicizia()">Aggiungi</a>
-								</div>
-
 							</div>
-						</div>
-					</c:forEach>
-
+						</c:forEach>
+					</div>
 				</div>
 
 			</section>
 		</div>
 	</div>
-	<br>
-	<br>
-	<br>
-	<a class="carousel-control-prev" href="#carouselExampleIndicators"
-		role="button" data-slide="prev"> <span
-		class="carousel-control-prev-icon" aria-hidden="true"></span> <span
+	<br> <br> <br> <a class="carousel-control-prev"
+		href="#carouselExampleIndicators" role="button" data-slide="prev">
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span> <span
 		class="sr-only">Previous</span>
 	</a> <a class="carousel-control-next" href="#carouselExampleIndicators"
 		role="button" data-slide="next"> <span

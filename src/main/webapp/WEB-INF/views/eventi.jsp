@@ -46,31 +46,33 @@
 			
 			<div class="p-3 mb-2 bg-light text-dark shadow p-3 mb-5 bg-white rounded"><h1 align="center">LISTA EVENTI DISPONIBILI</h1></div>
 
+				<div class="container_flex_eventi">
 				<c:forEach items="${lists}" var="list" varStatus="tagStatus">
+				
 					<div class="filterDiv tutti">
-						<div class="card shadow p-3 mb-5 bg-white rounded">
+						<div class="item card shadow p-3 mb-5 bg-white rounded">
 							<img class="card_image"
 								src="${contextPath}/resources/images/LogoEventi.jpg"
 								alt="Nature">
 							<div class="card_copy">
-								<h3>${list.name}</h3>
-								<p>${list.description}</p>
-								<p>${list.luogo}</p>
-								
-								<div class="allinea allinea_par_dett">
+								<h3 class="nome">${list.name}</h3>
+								<p class="descrizione">${list.description}</p>
+								<p class="descrizione">${list.luogo}</p>
+							<div class="allinea_container">
+								<div class="allinea_item">
 									<a href="${contextPath}/eventi/askToJoin?idevento=${list.id}"
 										class="button_partecipa" onclick="myFunctionPartecipa()">Partecipa</a>
 								</div>
-								<div class="allinea allinea_par_dett">
+								<div class="allinea_item">
 									<a href="${contextPath}/eventi/getEventId?idEvento=${list.id}"
 										class="button_dettagli">Dettagli</a>
 								</div>
-								
+							</div>
 							</div>
 						</div>
 					</div>
 				</c:forEach>
-
+				</div>
 			</section>
 			
 			</div>
@@ -82,31 +84,33 @@
 				
 				<div class="p-3 mb-2 bg-light text-dark shadow p-3 mb-5 bg-white rounded"><h1 align="center">EVENTI SUGGERITI IN BASE ALLE PREFERENZE</h1></div>
 				
+				<div class="container_flex_eventi">
 				<c:forEach items="${mymatchlist}" var="list" varStatus="tagStatus">
 					<div class="filterDiv mymatch">
-						<div class="card shadow p-3 mb-5 bg-white rounded">
+						<div class="item card shadow p-3 mb-5 bg-white rounded">
 							<img class="card_image"
 								src="${contextPath}/resources/images/LogoEventi.jpg"
 								alt="Nature">
 							<div class="card_copy ">
-								<h3>${list.name}</h3>
-								<p>${list.description}</p>
-								<p>${list.luogo}</p>
+								<h3 class="nome">${list.name}</h3>
+								<p class="descrizione">${list.description}</p>
+								<p class="descrizione">${list.luogo}</p>
 
-								<div class="allinea">
+							<div class="allinea_container">
+								<div class="allinea_item">
 									<a href="${contextPath}/eventi/askToJoin?idevento=${list.id}"
 										class="button_partecipa">Partecipa</a>
 								</div>
-								<div class="allinea">
+								<div class="allinea_item">
 									<a href="${contextPath}/eventi/getEventId?idEvento=${list.id}"
 										class="button_dettagli">Dettagli</a>
 								</div>
-
+							</div>
 							</div>
 						</div>
 					</div>
 				</c:forEach>
-
+				</div>
 			</section>
 
 		</div>

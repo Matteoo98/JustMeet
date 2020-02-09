@@ -19,27 +19,30 @@
 	
 		<div class="p-3 mb-2 bg-light text-dark shadow p-3 mb-5 bg-white rounded"><h1 align="center">EVENTI LUDICI</h1></div>
 
+		<div class="container_flex">
 		<c:forEach items="${Events}" var="event" varStatus="tagStatus">
-			<div class="card shadow p-3 mb-5 bg-white rounded">
+			<div class="item card shadow p-3 mb-5 bg-white rounded">
 				<img class="card_image"
 					src="${contextPath}/resources/images/LogoGames.jpg" alt="Nature">
 				<div class="card_copy">
-					<h3>${event.name}</h3>
-					<p>Descrizione : ${event.description}</p>
-					<p>Luogo : ${event.luogo}</p>
+					<h3 class="nome">${event.name}</h3>
+						<p class="descrizione">${event.description}</p>
+						<p class="descrizione">${event.luogo}</p>
 					
-					<div class="allinea">
+					<div class="allinea_container">
+					<div class="allinea_item">
 						<a href="${contextPath}/eventi/askToJoin?idevento=${event.id}"
 							class="button_partecipa">Partecipa</a>
 					</div>
-					<div class="allinea">
+					<div class="allinea_item">
 						<a href="${contextPath}/eventi/getEventId?idEvento=${event.id}"
 							class="button_dettagli">Dettagli</a>
+					</div>
 					</div>
 				</div>
 			</div>
 		</c:forEach>
-
+	</div>
 	</section>
 
 	</div>

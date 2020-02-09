@@ -30,6 +30,7 @@
     
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="${contextPath}/resources/css/style.css">
+	<link rel="stylesheet" href="${contextPath}/resources/css/styleFlex.css">
 	<link rel="stylesheet" href="${contextPath}/resources/css/styleMobile.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">

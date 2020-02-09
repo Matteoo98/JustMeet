@@ -1,0 +1,90 @@
+* {
+	box-sizing: border-box;
+}
+
+/* ********************** 
+          GENERAL 
+********************** */
+
+.container_flex {
+  	display: flex; /* or inline-flex */
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.container_flex_eventi {
+  	display: flex; /* or inline-flex */
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.item {
+	flex-basis: 30%;
+	padding: 20px;
+}
+.bordo {
+	border: 1px solid red;
+}
+
+.allinea_container {
+	display: flex; /* or inline-flex */
+	flex-wrap: nowrap;
+	justify-content: space-around;
+}
+.allinea_item {
+}
+.allinea_item2 {
+	align-self: flex-start;
+}
+
+/* **********************
+          CARDS
+********************** */
+.cards {
+	max-width: 1200px;
+	margin: 40px auto;
+}
+
+
+.card {
+	/* width: 30%; // non metterlo */
+	width: 362px;
+	height: 550px;
+	margin: 0 1.5%;
+	background: #fff;
+	float: left;
+} 
+
+.card_image {
+	/* non mettere width: 100%; height: auto; */
+	width: auto; height: 60%;
+}
+
+.card_copy {
+	padding: 5px 20px;
+}
+
+.card_copy h3 {
+	margin-bottom: 0
+} 
+/* ******************************************************* */
+
+.descrizione {
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+}
+.nome {
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+
+@media (max-width: 767px) {
+
+	.item {
+		flex-basis: 50%;
+		flex-grow: 1;
+	}
+
+}

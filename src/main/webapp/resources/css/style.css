@@ -131,7 +131,7 @@ body {
 	padding: 10px 20px;
 	border-radius: 3px;
 	text-decoration: none;
-	margin-left: 33%;
+	/* margin-left: 33%; */
 }
 
 .button_disdici {
@@ -141,7 +141,7 @@ body {
 	padding: 10px 20px;
 	border-radius: 3px;
 	text-decoration: none;
-	margin-left: 33%;
+	/* margin-left: 33%; */
 }
 
 .button_elimina {
@@ -158,7 +158,7 @@ body {
 	padding: 10px 20px;
 	border-radius: 3px;
 	text-decoration: none;
-	margin-left: 33%;
+	/* margin-left: 33%; */
 }
 
 .button_dettagli_account {
@@ -169,7 +169,7 @@ body {
 	border-radius: 3px;
 	text-decoration: none;
 	margin-left: 33%;
-	margin-top: 1%;
+	margin-top: 1%; 
 }
 
 .button_partecipa_studio {
@@ -424,22 +424,24 @@ a:hover {
 /* ********************** 
           CARDS 
 ********************** */
+/*
 .cards {
 	max-width: 1200px;
 	margin: 40px auto;
 }
 
+
 .card {
-	/* width: 30%; */
+	 width: 30%; // non metterlo
 	width: 362px;
 	height: 550px;
 	margin: 0 1.5%;
 	background: #fff;
 	float: left;
-}
+} 
 
 .card_image {
-	/* width: 100%; height: auto; */
+	// non mettere width: 100%; height: auto; 
 	width: auto; height: 60%;
 }
 
@@ -449,7 +451,8 @@ a:hover {
 
 .card_copy h3 {
 	margin-bottom: 0
-}
+} 
+*/
 
 /* ********************** 
           BANNER 

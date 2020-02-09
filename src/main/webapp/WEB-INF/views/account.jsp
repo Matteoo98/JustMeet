@@ -98,32 +98,36 @@
 			<section class="cards clearfix">
 				
 				<div class="p-3 mb-2 bg-light text-dark shadow p-3 mb-5 bg-white rounded"><h1 align="center">EVENTI A CUI TI SEI UNITO</h1></div>
+				
+				<div class="container_flex">
+				
 				<c:forEach items="${Events}" var="event" varStatus="tagStatus">
-					<div class="card shadow p-3 mb-5 bg-white rounded">
+				
+					<div class="item card shadow p-3 mb-5 bg-white rounded">
 						<img class="card_image"
 							src="${contextPath}/resources/images/LogoEventi.jpg" alt="Nature">
 						<div class="card_copy">
-							<h3>${event.name}</h3>
-							<p>Descrizione : ${event.description}</p>
-							<p>Luogo : ${event.luogo}</p>
+							<h3 class="nome">${event.name}</h3>
+							<p class="descrizione">${event.description}</p>
+							<p class="descrizione">${event.luogo}</p>
 
 							<p></p>
+							
+							<div class="allinea_container">
+								<div class="allinea_item">
+									<a href="${contextPath}/eventi/getEventId?idEvento=${event.id}"
+										class="button_dettagli">Dettagli</a>
+								</div>
 
-							<div class="allinea allinea_dett_dis">
-								<a href="${contextPath}/eventi/getEventId?idEvento=${event.id}"
-									class="button_dettagli">Dettagli</a>
+								<div class="allinea_item">
+									<a href="${contextPath}/account/getEventNamePerDisdire?id=${event.id}"
+										class="button_disdici">Disdici</a>
+								</div>
 							</div>
-
-							<div class="allinea allinea_dett_dis">
-								<a
-									href="${contextPath}/account/getEventNamePerDisdire?id=${event.id}"
-									class="button_disdici">Disdici</a>
-							</div>
-
 						</div>
 					</div>
 				</c:forEach>
-
+				</div>
 			</section>
 
 		</div>
@@ -133,40 +137,41 @@
 
 				<div class="p-3 mb-2 bg-light text-dark shadow p-3 mb-5 bg-white rounded"><h1 align="center">EVENTI CHE HAI CREATO</h1></div>
 				
+				<div class="container_flex">
 				<c:forEach items="${owner}" var="event" varStatus="tagStatus">
-					<div class="card shadow p-3 mb-5 bg-white rounded">
+				
+					<div class="item card shadow p-3 mb-5 bg-white rounded">
 						<img class="card_image"
 							src="${contextPath}/resources/images/myevents.jpg" alt="Nature">
 						<div class="card_copy">
-							<h3>${event.name}</h3>
-							<p>Descrizione : ${event.description}</p>
-							<p>Luogo : ${event.luogo}</p>
+							<h3 class="nome">${event.name}</h3>
+							<p class="descrizione">${event.description}</p>
+							<p class="descrizione">${event.luogo}</p>
 
 							<p></p>
 
-							<div class="allinea allinea3">
+						<div class="allinea_container">
+							<div class="allinea_item">
 								<a href="${contextPath}/adminEvent?idEvento=${event.id}"
 									class="button_partecipa">Modifica</a>
 							</div>
 
-							<div class="allinea allinea3">
+							<div class="allinea_item">
 								<a href="${contextPath}/managePartecipanti?idEvento=${event.id}"
 									class="button_dettagli">Gestione</a>
 							</div>
+						</div>
+						
+							<br>
 
-							<br> <br>
-
-
-
-							<div>
-								<a
-									href="${contextPath}/account/deleteEvent?idEvento=${event.id}"
+							<div class="allinea_container">
+								<a href="${contextPath}/account/deleteEvent?idEvento=${event.id}"
 									class="btn2 button_elimina btn-lg btn-block">Elimina</a>
 							</div>
 						</div>
 					</div>
 				</c:forEach>
-
+				</div>
 			</section>
 
 		</div>
