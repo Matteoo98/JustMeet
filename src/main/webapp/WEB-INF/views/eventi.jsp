@@ -16,6 +16,7 @@
 <div class="container2">
 
 	<div id="myBtnContainer" class="button_Sh_My allinea_dx">
+	
 		<form:form class="form-inline my-2 my-lg-0" name="searchEvent"
 			action="searchEvent" method="POST">
 			<input class="form-control mr-sm-2" type="search" name="searchEvent"

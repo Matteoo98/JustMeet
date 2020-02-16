@@ -12,7 +12,8 @@
   <script src="${contextPath}/resources/js/flipside.js"></script>
   <script src="${contextPath}/resources/js/alert.js"></script>
   <script src="${contextPath}/resources/js/map.js"></script>
-   
+  <script src="${contextPath}/resources/js/app.js"></script>
+  <script src="${contextPath}/resources/js/sw.js"></script> 
     <script>
       $(document).ready(function(){
 
