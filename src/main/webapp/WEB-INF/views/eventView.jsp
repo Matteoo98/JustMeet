@@ -68,8 +68,7 @@
 				</c:forEach>
 			</p>
 			<br>
-			<script
-				src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.1.1/build/ol.js"></script>
+			
 
 			<div id="map" class="map"></div>
 			<br> <a class="btn btn-outline-success"
