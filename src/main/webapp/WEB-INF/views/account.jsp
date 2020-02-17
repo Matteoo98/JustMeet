@@ -19,8 +19,11 @@
 	<c:forEach items="${User}" var="user" varStatus="tagStatus">
 		<article class="single">
 			<div class="single_copy shadow p-3 mb-5 bg-white rounded">
-				
-				<div class="p-3 mb-2 bg-light text-dark shadow-sm p-3 mb-5 bg-white rounded single_copy_title"><h2 align="center">INFORMAZIONI UTENTE</h2></div>
+
+				<div
+					class="p-3 mb-2 bg-light text-dark shadow-sm p-3 mb-5 bg-white rounded single_copy_title">
+					<h2 align="center">INFORMAZIONI UTENTE</h2>
+				</div>
 				<br>
 
 				<p class="single_copy_meta2">
@@ -96,37 +99,43 @@
 		<div class="carousel-item active">
 
 			<section class="cards clearfix">
-				
-				<div class="p-3 mb-2 bg-light text-dark shadow p-3 mb-5 bg-white rounded"><h1 align="center">EVENTI A CUI TI SEI UNITO</h1></div>
-				
+
+				<div
+					class="p-3 mb-2 bg-light text-dark shadow p-3 mb-5 bg-white rounded">
+					<h1 align="center">EVENTI A CUI TI SEI UNITO</h1>
+				</div>
+
 				<div class="container_flex">
-				
-				<c:forEach items="${Events}" var="event" varStatus="tagStatus">
-				
-					<div class="item card shadow p-3 mb-5 bg-white rounded">
-						<img class="card_image"
-							src="${contextPath}/resources/images/LogoEventi.jpg" alt="Nature">
-						<div class="card_copy">
-							<h3 class="nome">${event.name}</h3>
-							<p class="descrizione">${event.description}</p>
-							<p class="descrizione">${event.luogo}</p>
 
-							<p></p>
-							
-							<div class="allinea_container">
-								<div class="allinea_item">
-									<a href="${contextPath}/eventi/getEventId?idEvento=${event.id}"
-										class="button_dettagli">Dettagli</a>
-								</div>
+					<c:forEach items="${Events}" var="event" varStatus="tagStatus">
 
-								<div class="allinea_item">
-									<a href="${contextPath}/account/getEventNamePerDisdire?id=${event.id}"
-										class="button_disdici">Disdici</a>
+						<div class="item card shadow p-3 mb-5 bg-white rounded">
+							<img class="card_image"
+								src="${contextPath}/resources/images/LogoEventi.jpg"
+								alt="Nature">
+							<div class="card_copy">
+								<h3 class="nome">${event.name}</h3>
+								<p class="descrizione">${event.description}</p>
+								<p class="descrizione">${event.luogo}</p>
+
+								<p></p>
+
+								<div class="allinea_container">
+									<div class="allinea_item">
+										<a
+											href="${contextPath}/eventi/getEventId?idEvento=${event.id}"
+											class="button_dettagli">Dettagli</a>
+									</div>
+
+									<div class="allinea_item">
+										<a
+											href="${contextPath}/account/getEventNamePerDisdire?id=${event.id}"
+											class="button_disdici">Disdici</a>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-				</c:forEach>
+					</c:forEach>
 				</div>
 			</section>
 
@@ -135,49 +144,53 @@
 
 			<section class="cards clearfix">
 
-				<div class="p-3 mb-2 bg-light text-dark shadow p-3 mb-5 bg-white rounded"><h1 align="center">EVENTI CHE HAI CREATO</h1></div>
-				
+				<div
+					class="p-3 mb-2 bg-light text-dark shadow p-3 mb-5 bg-white rounded">
+					<h1 align="center">EVENTI CHE HAI CREATO</h1>
+				</div>
+
 				<div class="container_flex">
-				<c:forEach items="${owner}" var="event" varStatus="tagStatus">
-				
-					<div class="item card shadow p-3 mb-5 bg-white rounded">
-						<img class="card_image"
-							src="${contextPath}/resources/images/myevents.jpg" alt="Nature">
-						<div class="card_copy">
-							<h3 class="nome">${event.name}</h3>
-							<p class="descrizione">${event.description}</p>
-							<p class="descrizione">${event.luogo}</p>
+					<c:forEach items="${owner}" var="event" varStatus="tagStatus">
 
-							<p></p>
+						<div class="item card shadow p-3 mb-5 bg-white rounded">
+							<img class="card_image"
+								src="${contextPath}/resources/images/myevents.jpg" alt="Nature">
+							<div class="card_copy">
+								<h3 class="nome">${event.name}</h3>
+								<p class="descrizione">${event.description}</p>
+								<p class="descrizione">${event.luogo}</p>
 
-						<div class="allinea_container">
-							<div class="allinea_item">
-								<a href="${contextPath}/adminEvent?idEvento=${event.id}"
-									class="button_partecipa">Modifica</a>
-							</div>
+								<p></p>
 
-							<div class="allinea_item">
-								<a href="${contextPath}/managePartecipanti?idEvento=${event.id}"
-									class="button_dettagli">Gestione</a>
+								<div class="allinea_container">
+									<div class="allinea_item">
+										<a href="${contextPath}/adminEvent?idEvento=${event.id}"
+											class="button_partecipa">Modifica</a>
+									</div>
+
+									<div class="allinea_item">
+										<a
+											href="${contextPath}/managePartecipanti?idEvento=${event.id}"
+											class="button_dettagli">Gestione</a>
+									</div>
+								</div>
+
+								<br>
+
+								<div class="allinea_container">
+									<a
+										href="${contextPath}/account/deleteEvent?idEvento=${event.id}"
+										class="btn2 button_elimina btn-lg btn-block">Elimina</a>
+								</div>
 							</div>
 						</div>
-						
-							<br>
-
-							<div class="allinea_container">
-								<a href="${contextPath}/account/deleteEvent?idEvento=${event.id}"
-									class="btn2 button_elimina btn-lg btn-block">Elimina</a>
-							</div>
-						</div>
-					</div>
-				</c:forEach>
+					</c:forEach>
 				</div>
 			</section>
 
 		</div>
 	</div>
-	<br> <br> <br> 
-	<a class="carousel-control-prev"
+	<br> <br> <br> <a class="carousel-control-prev"
 		href="#carouselExampleIndicators" role="button" data-slide="prev">
 		<span class="carousel-control-prev-icon" aria-hidden="true"></span> <span
 		class="sr-only">Previous</span>

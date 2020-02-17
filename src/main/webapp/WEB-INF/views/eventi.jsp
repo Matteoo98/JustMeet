@@ -16,7 +16,7 @@
 <div class="container2">
 
 	<div id="myBtnContainer" class="button_Sh_My allinea_dx">
-	
+
 		<form:form class="form-inline my-2 my-lg-0" name="searchEvent"
 			action="searchEvent" method="POST">
 			<input class="form-control mr-sm-2" type="search" name="searchEvent"
@@ -28,7 +28,9 @@
 	</div>
 </div>
 
-<br><br><br>
+<br>
+<br>
+<br>
 <br>
 
 <div id="carouselExampleIndicators" class="carousel slide"
@@ -40,77 +42,86 @@
 	</ol>
 	<div class="carousel-inner">
 		<div class="carousel-item active">
-		
-		<div class="container3"> 
 
-			<section class="cards clearfix">
-			
-			<div class="p-3 mb-2 bg-light text-dark shadow p-3 mb-5 bg-white rounded"><h1 align="center">LISTA EVENTI DISPONIBILI</h1></div>
+			<div class="container3">
 
-				<div class="container_flex_eventi">
-				<c:forEach items="${lists}" var="list" varStatus="tagStatus">
-				
-					<div class="filterDiv tutti">
-						<div class="item card shadow p-3 mb-5 bg-white rounded">
-							<img class="card_image"
-								src="${contextPath}/resources/images/LogoEventi.jpg"
-								alt="Nature">
-							<div class="card_copy">
-								<h3 class="nome">${list.name}</h3>
-								<p class="descrizione">${list.description}</p>
-								<p class="descrizione">${list.luogo}</p>
-							<div class="allinea_container">
-								<div class="allinea_item">
-									<a href="${contextPath}/eventi/askToJoin?idevento=${list.id}"
-										class="button_partecipa" onclick="myFunctionPartecipa()">Partecipa</a>
-								</div>
-								<div class="allinea_item">
-									<a href="${contextPath}/eventi/getEventId?idEvento=${list.id}"
-										class="button_dettagli">Dettagli</a>
-								</div>
-							</div>
-							</div>
-						</div>
+				<section class="cards clearfix">
+
+					<div
+						class="p-3 mb-2 bg-light text-dark shadow p-3 mb-5 bg-white rounded">
+						<h1 align="center">LISTA EVENTI DISPONIBILI</h1>
 					</div>
-				</c:forEach>
-				</div>
-			</section>
-			
+
+					<div class="container_flex_eventi">
+						<c:forEach items="${lists}" var="list" varStatus="tagStatus">
+
+							<div class="filterDiv tutti">
+								<div class="item card shadow p-3 mb-5 bg-white rounded">
+									<img class="card_image"
+										src="${contextPath}/resources/images/LogoEventi.jpg"
+										alt="Nature">
+									<div class="card_copy">
+										<h3 class="nome">${list.name}</h3>
+										<p class="descrizione">${list.description}</p>
+										<p class="descrizione">${list.luogo}</p>
+										<div class="allinea_container">
+											<div class="allinea_item">
+												<a
+													href="${contextPath}/eventi/askToJoin?idevento=${list.id}"
+													class="button_partecipa" onclick="myFunctionPartecipa()">Partecipa</a>
+											</div>
+											<div class="allinea_item">
+												<a
+													href="${contextPath}/eventi/getEventId?idEvento=${list.id}"
+													class="button_dettagli">Dettagli</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</c:forEach>
+					</div>
+				</section>
+
 			</div>
 
 		</div>
 		<div class="carousel-item">
 
 			<section class="cards clearfix">
-				
-				<div class="p-3 mb-2 bg-light text-dark shadow p-3 mb-5 bg-white rounded"><h1 align="center">EVENTI SUGGERITI IN BASE ALLE PREFERENZE</h1></div>
-				
-				<div class="container_flex_eventi">
-				<c:forEach items="${mymatchlist}" var="list" varStatus="tagStatus">
-					<div class="filterDiv mymatch">
-						<div class="item card shadow p-3 mb-5 bg-white rounded">
-							<img class="card_image"
-								src="${contextPath}/resources/images/LogoEventi.jpg"
-								alt="Nature">
-							<div class="card_copy ">
-								<h3 class="nome">${list.name}</h3>
-								<p class="descrizione">${list.description}</p>
-								<p class="descrizione">${list.luogo}</p>
 
-							<div class="allinea_container">
-								<div class="allinea_item">
-									<a href="${contextPath}/eventi/askToJoin?idevento=${list.id}"
-										class="button_partecipa">Partecipa</a>
+				<div
+					class="p-3 mb-2 bg-light text-dark shadow p-3 mb-5 bg-white rounded">
+					<h1 align="center">EVENTI SUGGERITI IN BASE ALLE PREFERENZE</h1>
+				</div>
+
+				<div class="container_flex_eventi">
+					<c:forEach items="${mymatchlist}" var="list" varStatus="tagStatus">
+						<div class="filterDiv mymatch">
+							<div class="item card shadow p-3 mb-5 bg-white rounded">
+								<img class="card_image"
+									src="${contextPath}/resources/images/LogoEventi.jpg"
+									alt="Nature">
+								<div class="card_copy ">
+									<h3 class="nome">${list.name}</h3>
+									<p class="descrizione">${list.description}</p>
+									<p class="descrizione">${list.luogo}</p>
+
+									<div class="allinea_container">
+										<div class="allinea_item">
+											<a href="${contextPath}/eventi/askToJoin?idevento=${list.id}"
+												class="button_partecipa">Partecipa</a>
+										</div>
+										<div class="allinea_item">
+											<a
+												href="${contextPath}/eventi/getEventId?idEvento=${list.id}"
+												class="button_dettagli">Dettagli</a>
+										</div>
+									</div>
 								</div>
-								<div class="allinea_item">
-									<a href="${contextPath}/eventi/getEventId?idEvento=${list.id}"
-										class="button_dettagli">Dettagli</a>
-								</div>
-							</div>
 							</div>
 						</div>
-					</div>
-				</c:forEach>
+					</c:forEach>
 				</div>
 			</section>
 

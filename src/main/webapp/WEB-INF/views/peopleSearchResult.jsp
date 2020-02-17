@@ -15,12 +15,6 @@
 	<c:forEach items="${ricercati}" var="user" varStatus="tagStatus">
 		<div class="card shadow p-3 mb-5 bg-white rounded">
 			<c:choose>
-				<c:when test="${user.username=='Noyz Narcos'}">
-					<img class="card_image"
-						src="http://3.citynews-latinatoday.stgy.ovh/~media/original-hi/45112367075825/noyz-12-2.jpg"
-						alt="Nature">
-				</c:when>
-
 				<c:when test="${user.username=='Pato07'}">
 					<img class="card_image"
 						src="https://i.pinimg.com/originals/d4/51/00/d4510008149492dd4d554d20d426bea9.jpg">

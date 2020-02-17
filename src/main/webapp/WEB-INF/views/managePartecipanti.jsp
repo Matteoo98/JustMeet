@@ -11,36 +11,39 @@
 
 <section class="cards clearfix">
 
-	<div class="p-3 mb-2 bg-light text-dark shadow p-3 mb-5 bg-white rounded"><h1 align="center">PARTECIPANTI</h1></div>
-	
-	<div class="container4">  
-	
-	<c:forEach items="${lista}" var="user" varStatus="tagStatus">
-		<div class="card shadow p-3 mb-5 bg-white rounded">
-			<img class="card_image"
-				src="${contextPath}/resources/images/persona.jpg" alt="Nature">
-			<div class="card_copy">
-				<h3>${user.username}</h3>
-				<p>Email : ${user.email}</p>
-				<p>Citta : ${user.citta}</p>
+	<div
+		class="p-3 mb-2 bg-light text-dark shadow p-3 mb-5 bg-white rounded">
+		<h1 align="center">PARTECIPANTI</h1>
+	</div>
 
-				<p></p>
+	<div class="container4">
 
-				<div class="allinea">
-					<a
-						href="${contextPath}/eventView/account?nomeUser=${user.username}"
-						class="button_dettagli">Dettagli</a>
+		<c:forEach items="${lista}" var="user" varStatus="tagStatus">
+			<div class="card shadow p-3 mb-5 bg-white rounded">
+				<img class="card_image"
+					src="${contextPath}/resources/images/persona.jpg" alt="Nature">
+				<div class="card_copy">
+					<h3>${user.username}</h3>
+					<p>Email : ${user.email}</p>
+					<p>Citta : ${user.citta}</p>
+
+					<p></p>
+
+					<div class="allinea">
+						<a
+							href="${contextPath}/eventView/account?nomeUser=${user.username}"
+							class="button_dettagli">Dettagli</a>
+					</div>
+
+					<div class="allinea">
+						<a
+							href="${contextPath}/managePartecipanti/remove?id=${idevento}&username=${user.username}"
+							class="button_disdici">Rimuovi</a>
+					</div>
+
 				</div>
-
-				<div class="allinea">
-					<a
-						href="${contextPath}/managePartecipanti/remove?id=${idevento}&username=${user.username}"
-						class="button_disdici">Rimuovi</a>
-				</div>
-
 			</div>
-		</div>
-	</c:forEach>
+		</c:forEach>
 
 	</div>
 
@@ -49,48 +52,49 @@
 <hr width=70%; align="center";>
 <br>
 
-<div class="container4">  
+<div class="container4">
 
-<form:form class="form-inline my-2 my-lg-0" name="search"
-	action="search" method="POST" id="contattaci">
-	<input class="form-control mr-sm-2" type="search" name="search"
-		placeholder="Nuovi partecipanti.." aria-label="Search">
-	<button class="btn btn-outline-success my-2 my-sm-0" type="submit">
-		<i class="fa fa-search"></i> Cerca
-	</button>
-</form:form>
+	<form:form class="form-inline my-2 my-lg-0" name="search"
+		action="search" method="POST" id="contattaci">
+		<input class="form-control mr-sm-2" type="search" name="search"
+			placeholder="Nuovi partecipanti.." aria-label="Search">
+		<button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+			<i class="fa fa-search"></i> Cerca
+		</button>
+	</form:form>
 
 </div>
 
 <c:forEach items="${ricercati}" var="user" varStatus="tagStatus">
-	<section class="banner_notify shadow p-3 mb-5 bg-white rounded clearfix">
-	
-		<div class="container5">  
-	
-		<div class="banner_copy ">
-			<div class="banner_copy_text ">
+	<section
+		class="banner_notify shadow p-3 mb-5 bg-white rounded clearfix">
 
-				<p class="single_copy_meta2">
-					<strong>Nome :</strong> &emsp;<a
-						href="${contextPath}/eventView/account?nomeUser=${user.username}">${user.username}</a>
-				</p>
+		<div class="container5">
 
-				<p class="single_copy_meta2">
-					<strong>Citta &nbsp;&nbsp;:</strong> &emsp;${user.citta}
-				</p>
+			<div class="banner_copy ">
+				<div class="banner_copy_text ">
 
-				<p class="single_copy_meta2">
-					<strong>Email &nbsp;:</strong> &emsp;${user.email}
-				</p>
+					<p class="single_copy_meta2">
+						<strong>Nome :</strong> &emsp;<a
+							href="${contextPath}/eventView/account?nomeUser=${user.username}">${user.username}</a>
+					</p>
 
-				<a
-					href="${contextPath}/managePartecipanti/addToEvent?id=${idevento}&username=${user.username}"
-					class="button_partecipa allinea">Aggiungi all'evento</a>
+					<p class="single_copy_meta2">
+						<strong>Citta &nbsp;&nbsp;:</strong> &emsp;${user.citta}
+					</p>
+
+					<p class="single_copy_meta2">
+						<strong>Email &nbsp;:</strong> &emsp;${user.email}
+					</p>
+
+					<a
+						href="${contextPath}/managePartecipanti/addToEvent?id=${idevento}&username=${user.username}"
+						class="button_partecipa allinea">Aggiungi all'evento</a>
+				</div>
 			</div>
+
 		</div>
-		
-		</div>
-		
+
 	</section>
 </c:forEach>
 
